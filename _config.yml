@@ -1,0 +1,28 @@
+# configures for Lorpheux by Legend Lee
+permalink: /blog/:year/:month/:day/:title
+auto: true
+markdown: rdiscount
+pygments: true
+paginate: 8
+
+title: LorpheuX
+url: http://legendlee1314.github.com
+author:
+  name: LegendLee
+  email: legendlee1314@gmail.com
+description: "LorpheuX -- Legend's Blog."
+about: "One person who enjoys codes."
+tags_path: /tags.html
+feed: /atom.xml
+static:
+  css: /css/style.css
+  jquery: /js/jquery.min.js
+blogName: LorpheuX
+blogDesc: Legend's Blog
+follow:
+  github: https://github.com/legendlee1314
+  twitter: https://twitter.com/legendlee1314
+  facebook: http://www.facebook.com/profile.php?id=100003741692205&ref=tn_tnmn
+disqus:
+  short_name: lorpheux
+production_url: http://legendlee1314.github.com

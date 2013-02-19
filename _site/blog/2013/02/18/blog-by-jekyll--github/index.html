@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    **
+    *
+    * Author:         Legend Lee
+    * Contact:        legendlee1314@gmail.com
+    * Theme: 		  designed by PIZn. 
+	* Modified:       by Legend at 2013. 
+    *
+    **
+  -->
+  <meta charset="utf-8" />
+  <title>Blog by Jekyll and Github | LorpheuX</title>
+  <meta name="generator" content="Jekyll" />
+  <meta name="author" content="LegendLee" />
+  <meta name="description" content="LorpheuX -- Legend's Blog." />
+  <link rel="stylesheet" href="/css/style.css" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
+  <link rel="shortcut icon" href="/images/favicon.ico"/>
+</head>
+<body>
+    <script src="/js/jquery.min.js"></script>
+    <header class="head">
+	<div class="header fn-clear">
+		<section class="header-cnt fn-clear">
+			<div class="logo">
+				<div class="logo-cnt">
+				 	<h1><a href="/">LorpheuX</a></h1>
+				 	<h2>Legend's Blog</h2>
+				</div>
+			</div>
+			<nav class="nav">
+				<ul>
+					<li><a href="/" >Home</a></li>
+					<li><a href="/archives.html" >Archives</a></li>
+					<li><a href="/tags.html" >Tags</a></li>
+					<li><a href="/contact.html" >About & Contact</a></li>
+				</ul>
+			</nav>
+		</section>
+	</div>
+</header>
+ 
+  <section id="content">
+    <article id="contenter">
+      <section class="content">
+	<div class="content-cnt fn-clear">
+		<div class="main fn-clear">
+			<article class="entry">
+				<h1 class="title">Blog by Jekyll and Github</h1>
+               	<p class="meta"><time class="date" pubdate="2013-02-18">18 Feb 2013</time> By <a href="/contact.html" class="author" title="author">LegendLee</a><g:plusone size="small"></g:plusone></p>
+               	<p class="description"></p>
+				<p class="tags"><a class="tags">JekyllGithub</a><p>
+ 			 	
+
+                <nav class="pagination-link">
+                    
+                    
+                 </nav>
+			</article><!-- .entry -->		
+			<a class="comments" id="disqus_show">Comments?</a>
+<div id="disqus_thread"></div>
+<script type="text/javascript">
+$(document).ready(function() {
+    var disqus_developer = 1;
+    var disqus_shortname = 'lorpheux'; // required: replace example with your forum shortname
+	$("#disqus_show").click(function() {
+    	/* * * DON'T EDIT BELOW THIS LINE * * */
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    });
+});
+</script>
+
+		</div>
+		<div class="aside fn-clear">
+			<div class="box fn-clear">
+	<div class="search">
+		<h4 class="title">Search<h4>
+		<input type="text" id="bg_search" placeholder="Search"/>
+		<button id="btn_search" type="button">Search</button>
+		<div id="auto"></div>  
+	</div>
+</div>
+<script type="text/javascript">
+$(document).ready(function() {
+	var autoNode = $("#auto");     
+	var wordInput = $("#bg_search"); 
+	var highlightindex = -1;     
+	var timeoutId;     
+	var wordInputOffset = wordInput.offset();     
+	autoNode.hide().css("border", "1px rgba(82, 168 ,236, 0.8) solid").css("position", "absolute")     
+					.css("top", wordInputOffset.top + wordInput.height() + 9 + "px").css("color", "#333")     
+					.css("left", wordInputOffset.left + "px").css("background", "url(/images/skin.png) repeat 0 0 #f2f2f2")
+					.width(wordInput.width() + 14).css("border-radius", "4px");     
+	var feed;
+	wordInput.keyup(function(event) {     
+		var myEvent = event || window.event;     
+		var keyCode = myEvent.keyCode;     
+		if (keyCode >= 65 && keyCode <= 90 || keyCode == 8 || keyCode == 48){     
+		var wordText = wordInput.val();     
+		if (wordText != "") {     
+		clearTimeout(timeoutId);     
+		timeoutId = setTimeout(function() {     
+			$.ajax({
+				type: "get",
+				url: "atom.xml",
+				dataType: "xml",
+				success: function( xmlResponse ) {
+					feed = $( "entry", xmlResponse ).map(function() {
+					return { title: $( "title", this ).text(), url: $("url", this).text() };
+					}).get();
+					var n=8;
+					var flag=false;
+					for(var i=0; i < feed.length && i < n; i++) {
+						if(feed[i].title.indexOf(wordText) != -1) {
+							autoNode.html("");     
+							var wordNode = feed[i].title;     
+							var newDivNode = $("<div>");     
+							newDivNode.html(wordNode).appendTo(autoNode);     
+							newDivNode.mouseover(function() {     
+								if (highlightindex != -1) {     
+								autoNode.children("div").eq(highlightindex)     
+								.css("background-color", "#f2f2f2");     
+								}     
+								highlightindex = i;     
+								$(this).css("background-color", "#B0C4DE");     
+								});     
+							newDivNode.mouseout(function() {     
+								$(this).css("background-color", "#f2f2f2");     
+								});     
+							newDivNode.click(function() {     
+								autoNode.hide();     
+								highlightindex = -1;     
+								$("#bg_search").val(wordNode);     
+								});     
+							flag=true;
+						}
+					}
+					if(flag){
+						autoNode.show();     
+					} else {
+						autoNode.hide();     
+					}
+
+					}
+				});
+		}, 200);     
+
+		} else {     
+			autoNode.hide();     
+			highlightindex = -1;     
+		}     
+	}     
+	});     
+	$("#btn_search").click(function() {
+		if($("#bg_search").val()!="") {
+		for(var i=0; i < feed.length ; i++) {
+			var wordText = $("#bg_search").val();
+			if(feed[i].title.indexOf(wordText) != -1) {
+				window.location.href=feed[i].url;
+				break;
+			}
+		}
+		}
+	});
+});
+</script>
+
+			<div class="box fn-clear">
+	<h4 class="title">Tags</h4>
+	<div class="tags">
+		<ul class="tag_box inline">
+			   
+				<li><a href="/tags.html#Jekyll-ref">Jekyll <span>1</span></a></li>
+	    	   
+				<li><a href="/tags.html#Github-ref">Github <span>1</span></a></li>
+	    	  
+		</ul>
+	</div>
+</div>
+
+			<div class="box fn-clear">
+	<p>coming soon!</p>
+</div>
+
+		</div>
+	</div>
+</section>
+
+    </article>
+  </section>
+    <footer class="foot">
+	<div class="foot-cnt fn-clear">
+		<div class="foot-cnt-det fn-clear">
+			<article class="about">
+				<h4 class="title">About Me</h4>
+				<p>One person who enjoys codes.</p>
+			</article>
+			<article class="follow">
+				<h4 class="title">Follow Me</h4>
+				<ul>
+					<li><a href="https://github.com/legendlee1314" class="ico-github" target="_blank">github</a></li>
+					<li><a href="https://twitter.com/legendlee1314" class="ico-twitter">twitter</a></li>
+					<li><a href="http://www.facebook.com/profile.php?id=100003741692205&ref=tn_tnmn" class="ico-facebook">facebook</a></li>
+				</ul>
+			</article>
+		</div>
+	</div>
+	<div class="foot-btn">
+		<div class="foot-btn-det">
+			<p class="copyright">Copyright © 2013 Legend Lee All rights reserved.</p>
+			<p class="author">Powered by <a href="http://www.jekyllrb.com">Jekyll</a>. Modified and Used by <a href="http://legendlee1314.gitbug.com">Legend</a></p>
+		</div>
+	</div>
+</footer>
+
+</body>
+</html>
