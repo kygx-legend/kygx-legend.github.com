@@ -175,13 +175,13 @@ body                        { background: url(/images/body-bg3.jpg) repeat 0 0; 
 /** entry **/
 .entry                      { background: url(/images/body-bg2.jpg) repeat 0 0; padding: 10px; border-radius: 10px; color: #eeeeee; font-family: Georgia, "Microsoft Yahei","Microsoft Jhenghei",STHeiti,PMingLiU,Simsun; }
 .entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 
-                            { margin: 0; padding: 0; font-family: Georgia, "Microsoft Yahei","Microsoft Jhenghei",STHeiti,PMingLiU,Simsun; }
-.entry h1                   { padding: 3px 0; font-size: 20px; line-height: normal; margin-bottom: 20px; color: #eee; font-weight: 700; border-bottom: 1px dashed #a8a8a8; }
-.entry h2                   { margin-bottom: 20px; color: #eee; padding: 3px 0; font-size: 18px; line-height: normal; border-bottom: 1px dashed #a8a8a8; font-family: 700; }
-.entry h3                   { font-size: 16px; font-weight: 700; line-height: 26px; color: #eee; border-bottom: 1px dashed #a8a8a8; margin-bottom: 18px; margin-top: 1.5em; }
-.entry h4                   { margin-bottom: 18px; font-size: 14px; font-weight: 700; color: #eee; line-height: 26px; text-transform: uppercase; }
-.entry h5                   { margin-bottom: 18px; color: #eee; font-size: 14px; line-height: 26px; text-transform: uppercase; }
-.entry h6                   { font-size: 13px; font-weight: 700; margin-bottom: 0.5em; color: #eee; line-height: 26px; }
+                            { font-weight: bold; color: #6495ED; margin-top: 30px; padding: 0; font-family: UbuntuMono-B, consolas, monaco, monospace, "Microsoft Yahei","Microsoft Jhenghei"; }
+.entry h1                   { padding: 3px 0; font-size: 30px; line-height: normal; margin-bottom: 20px; font-weight: 700; border-bottom: 1px dashed #a8a8a8; }
+.entry h2                   { margin-bottom: 20px; padding: 3px 0; font-size: 26px; line-height: normal; border-bottom: 1px dashed #a8a8a8; font-family: 700; }
+.entry h3                   { font-size: 22px; font-weight: 700; line-height: 26px; border-bottom: 1px dashed #a8a8a8; margin-bottom: 18px; margin-top: 1.5em; }
+.entry h4                   { margin-bottom: 18px; font-size: 18px; font-weight: 700; line-height: 26px; text-transform: uppercase; }
+.entry h5                   { margin-bottom: 18px; font-size: 14px; line-height: 26px; text-transform: uppercase; }
+.entry h6                   { font-size: 13px; font-weight: 700; margin-bottom: 0.5em; line-height: 26px; }
 .entry > h2:first-child, .entry > h1:first-child, .entry > h1:first-child + h2 
 							{ border: 0 none; }
 .entry p                    { font-size: 13px; line-height: 22px; margin-bottom: 15px; }

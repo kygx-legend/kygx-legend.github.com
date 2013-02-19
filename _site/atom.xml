@@ -4,7 +4,7 @@
  <title>LorpheuX</title>
  <link href="http://legendlee1314.github.com/atom.xml" rel="self"/>
  <link href="http://legendlee1314.github.com"/>
- <updated>2013-02-19T14:27:35+08:00</updated>
+ <updated>2013-02-19T14:52:57+08:00</updated>
  <id>http://legendlee1314.github.com</id>
  <author>
    <name>LegendLee</name>
@@ -18,9 +18,7 @@
    <link href="http://legendlee1314.github.com/blog/2013/02/18/blog-by-jekyll--github"/>
    <updated>2013-02-18T00:00:00+08:00</updated>
    <id>http://legendlee1314.github.com/blog/2013/02/18/blog-by-jekyll--github</id>
-   <content type="html">&lt;h1&gt;There are some steps to finish.&lt;/h1&gt;
-
-&lt;h2&gt;Github and Git&lt;/h2&gt;
+   <content type="html">&lt;h2&gt;Github and Git&lt;/h2&gt;
 
 &lt;blockquote&gt;&lt;p&gt;Go &lt;strong&gt;&lt;a href=&quot;&amp;lt;https://github.com&gt;&quot; title=&quot;Github&quot;&gt;Github&lt;/a&gt;&lt;/strong&gt; to create your &lt;strong&gt;account&lt;/strong&gt; and new &lt;strong&gt;repo&lt;/strong&gt; named your &lt;strong&gt;account name&lt;/strong&gt;. &lt;br/&gt;
 Initial your local &lt;em&gt;settings&lt;/em&gt; of &lt;strong&gt;git&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
@@ -30,6 +28,25 @@ Initial your local &lt;em&gt;settings&lt;/em&gt; of &lt;strong&gt;git&lt;/strong
 &lt;h2&gt;Jekyll&lt;/h2&gt;
 
 &lt;p&gt;You can see the web site of &lt;strong&gt;&lt;a href=&quot;&amp;lt;http://jekyllrb.com/&gt;&quot; title=&quot;Jekyll&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;INSTALL Jekyll&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;if ruby is installed:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gem install jekyll
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;if something wrong like needing other dependency:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo apt-get install ruby-dev ruby-full
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;if it is too slow, you can change the source:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gem sources http://ruby.taobao.org
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;WORK With Github&lt;/strong&gt;&lt;/p&gt;
 
 &lt;blockquote&gt;&lt;p&gt;You can download the &lt;strong&gt;Jekyll Bootstrap&lt;/strong&gt; for first time.&lt;/p&gt;
 
@@ -47,11 +64,36 @@ $ git push origin master
 
 &lt;p&gt;Go &lt;strong&gt;USERNAME.github.com&lt;/strong&gt; after a while. More guides is in &lt;strong&gt;&lt;a href=&quot;&amp;lt;http://jekyllrb.com/&gt;&quot; title=&quot;Jekyll&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
 
+&lt;p&gt;&lt;strong&gt;Struction of Jekyll&lt;/strong&gt;&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;.
+|-- _config.yml
+|-- _includes
+|-- _layouts
+|   |-- default.html
+|   |-- page.html
+|   `-- post.html
+|-- _posts
+|   `-- 2007-10-29-post.md
+|-- _site
+`-- index.html
+&lt;/code&gt;&lt;/pre&gt;
+
 &lt;h2&gt;Markdown&lt;/h2&gt;
 
 &lt;p&gt;One simple language.&lt;/p&gt;
 
-&lt;blockquote&gt;&lt;p&gt;You can see &lt;strong&gt;&lt;a href=&quot;&amp;lt;http://wowubuntu.com/markdown/&gt;&quot; title=&quot;Markdown&quot;&gt;this page&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;blockquote&gt;&lt;p&gt;You can see &lt;strong&gt;&lt;a href=&quot;&amp;lt;http://wowubuntu.com/markdown/&gt;&quot; title=&quot;Markdown&quot;&gt;this page&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;if you want to use &lt;strong&gt;rdiscountu&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gem install rdiscount
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;if you want to use &lt;strong&gt;pygments&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo easy_install Pygments
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 </content>
  </entry>
  
