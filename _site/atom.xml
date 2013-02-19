@@ -4,13 +4,23 @@
  <title>LorpheuX</title>
  <link href="http://legendlee1314.github.com/atom.xml" rel="self"/>
  <link href="http://legendlee1314.github.com"/>
- <updated>2013-02-19T14:52:57+08:00</updated>
+ <updated>2013-02-19T17:30:36+08:00</updated>
  <id>http://legendlee1314.github.com</id>
  <author>
    <name>LegendLee</name>
    <email>legendlee1314@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Summary of making Blog</title>
+   <url>/blog/2013/02/19/summary-of-making-blog</url>
+   <link href="http://legendlee1314.github.com/blog/2013/02/19/summary-of-making-blog"/>
+   <updated>2013-02-19T00:00:00+08:00</updated>
+   <id>http://legendlee1314.github.com/blog/2013/02/19/summary-of-making-blog</id>
+   <content type="html">
+</content>
+ </entry>
  
  <entry>
    <title>Blog by Github and Jekyll and Markdown</title>

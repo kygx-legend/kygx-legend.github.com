@@ -88,7 +88,7 @@ body                        { background: url(/images/body-bg3.jpg) repeat 0 0; 
 .content-cnt .main-excerpt p a                    
 							{ border-bottom: 1px dotted #686868; color: #eee; }
 .content-cnt .main-excerpt p a:hover              
-							{ background: #e8e8e8; border-bottom: 1px solid #777; text-decoration: none; }
+							{ background: #111111; border-bottom: 1px solid #777; text-decoration: none; }
 .content-cnt .main-excerpt-title a 
                             { color: #eee; }
 .content-cnt .main-excerpt .more 

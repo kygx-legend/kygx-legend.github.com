@@ -12,10 +12,6 @@ tags: [Jekyll, Github, Markdown]
 
 All you need is __[this][githubhelp]__! Another is __[Git Guide by Chinese][gitguide]__.
 
-[github]: <https://github.com> "Github"
-[githubhelp]: <https://help.github.com/> "Github Help"
-[gitguide]: <http://rogerdudler.github.com/git-guide/index.zh.html> "Git Guide"
-
 ## Jekyll
 You can see the web site of __[Jekyll][jekyll]__.
 
@@ -51,9 +47,6 @@ __Struction of Jekyll__
 	|-- _site
 	`-- index.html
 
-[jekyll]: <http://jekyllrb.com/> "Jekyll"
-
-
 ## Markdown
 One simple language.  
 
@@ -65,4 +58,4 @@ One simple language.
 > if you want to use __pygments__:
 	$ sudo easy_install Pygments
 
-[markdown]: <http://wowubuntu.com/markdown/> "Markdown"
+{% include href.md %}
