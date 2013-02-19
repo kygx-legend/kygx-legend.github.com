@@ -7,7 +7,7 @@ layout: default
 			<h1 class="title">Tags</h1><hr>
 			<ul class="tag_box inline">
 				  {% for tag in site.tags %} 
-					<li><a href="{{ site.tags_path}}#{{ tag[0] }}-ref">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
+				  	<li><a href="{{ site.tags_path}}#{{ tag[0] }}-ref" onclick="_hmt.push(['_trackPageview', '{{ site.tags_path}}#{{ tag[0] }}-ref']);">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
 		    	  {% endfor %}
 			</ul>
 			<h2 class="desc">Navigation:</h2>
@@ -18,9 +18,9 @@ layout: default
 					{% if node.title != null %}
 						{% if group == null or group == node.group %}
 							{% if page.url == node.url %}
-								<li class="active"><a href="{{node.url}}" class="active">{{node.title}}</a></li>
+								<li class="active"><a href="{{node.url}}" class="active" onclick="_hmt.push(['_trackPageview', '{{ node.url }}']);">{{node.title}}</a></li>
 							{% else %}
-								<li><a href="{{node.url}}">{{node.title}}</a></li>
+								<li><a href="{{node.url}}" onclick="_hmt.push(['_trackPageview', '{{ node.url }}']);">{{node.title}}</a></li>
 							{% endif %}
 						{% endif %}
 					{% endif %}
