@@ -19,11 +19,10 @@
   <link rel="stylesheet" href="{{ site.static.css }}" type="text/css" />
   <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
   <link rel="shortcut icon" href="/images/favicon.ico"/>
+	{% include googleanalytics.html %}
 </head>
 <body>
     <script src="{{ site.static.jquery }}"></script>
-	{% include googleanalytics.html %}
-	{% include baiduanalytics.html %}
     {% include head.html %} 
   <section id="content">
     <article id="contenter">
@@ -31,5 +30,6 @@
     </article>
   </section>
     {% include foot.html %}
+	{% include baiduanalytics.html %}
 </body>
 </html>
