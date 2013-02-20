@@ -63,7 +63,7 @@ __Uses of Jekyll__
 ## Markdown
 One simple language.  
 
-> You can see __[this page][markdown]__.
+> You can see __[this page][markdownguide]__ or see my other post named __Markdown Learning__.
 
 > if you want to use __rdiscountu__:
 	$ gem install rdiscount

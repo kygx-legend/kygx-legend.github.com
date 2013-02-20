@@ -6,7 +6,7 @@ category:
 tags: [Git, Github]
 ---
 
-* It is not the whole guide, just tell you how to use git by a new user.  If you want to know more, please go __[this page][google]__.
+* This is not the whole guide, just tell you how to use git by a new user.  If you want to know more, please go __[this page][google]__.
 * Arrange by [git guide][gitguide].
 * Imaging that you are installed the [github][github] now.  
 
