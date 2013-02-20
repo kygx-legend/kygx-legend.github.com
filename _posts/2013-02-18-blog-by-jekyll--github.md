@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Blog by Github and Jekyll and Markdown"
-description: "搭建个人博客"
+title: "Blog by Github &amp Jekyll &amp Markdown"
+description: "搭建个人博客快捷教程"
 category: 
 tags: [Jekyll, Github, Markdown]
 ---
@@ -32,7 +32,9 @@ __WORK With Github__
 	$ git remote add origin git@github.com:/USERNAME/USERNAME.github.com.git    
 	$ git add .   
 	$ git push origin master   
-> Go __USERNAME.github.com__ after a while. More guides is in __[Jekyll][jekyll]__.
+> Go __USERNAME.github.com__ after a while. More guides is in __[Jekyll][jekyll]__.  
+> Another tool is __rake__. You can install it now.
+	$ gem install rake
 
 __Struction of Jekyll__
 	.
@@ -47,6 +49,17 @@ __Struction of Jekyll__
 	|-- _site
 	`-- index.html
 
+__Uses of Jekyll__
+
+> Local testing. __Remember__ that once *_config.tml* changes, it becomes effective after restarting the server.
+	$ jekyll --server
+> Post one new post.
+	$ rake post title="YOUR TITLE"
+> You can change the theme by this. Such as change to _theme-the-program_.
+	$ rake theme:install git="https://github.com/jekyllbootstrap/theme-the-program.git"
+> Then change to it.
+	$ rake theme:switch name="the-program"
+
 ## Markdown
 One simple language.  
 
@@ -54,8 +67,14 @@ One simple language.
 
 > if you want to use __rdiscountu__:
 	$ gem install rdiscount
-
 > if you want to use __pygments__:
 	$ sudo easy_install Pygments
+> then change the *_config.yml* and restart the server.
+	markdown: rdiscount
+	pygments: true
+
+## Q&A
+
+If any question, please __[contact me][email]__.
 
 {% include href.md %}

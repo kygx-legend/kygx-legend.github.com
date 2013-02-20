@@ -12,7 +12,7 @@
     **
   -->
   <meta charset="utf-8" />
-  <title>Blog by Github and Jekyll and Markdown | LorpheuX</title>
+  <title>Blog by Github &amp Jekyll &amp Markdown | LorpheuX</title>
   <meta name="generator" content="Jekyll" />
   <meta name="author" content="LegendLee" />
   <meta name="description" content="LorpheuX -- Legend's Blog." />
@@ -63,9 +63,9 @@ _gaq.push(['_trackPageview']);
 	<div class="content-cnt fn-clear">
 		<div class="main fn-clear">
 			<article class="entry">
-				<h1 class="title">Blog by Github and Jekyll and Markdown</h1>
+				<h1 class="title">Blog by Github &amp Jekyll &amp Markdown</h1>
                	<p class="meta"><time class="date" pubdate="2013-02-18">18 Feb 2013</time> By <a href="/contact.html" class="author" title="author">LegendLee</a><g:plusone size="small"></g:plusone></p>
-               	<p class="description">搭建个人博客</p>
+               	<p class="description">搭建个人博客快捷教程</p>
 				<p class="tags"><a class="tags">Jekyll</a><a class="tags">Github</a><a class="tags">Markdown</a><p>
  			 	<h2>Github and Git</h2>
 
@@ -111,7 +111,11 @@ $ git add .
 $ git push origin master   
 </code></pre>
 
-<p>Go <strong>USERNAME.github.com</strong> after a while. More guides is in <strong><a href="&lt;http://jekyllrb.com/>" title="Jekyll">Jekyll</a></strong>.</p></blockquote>
+<p>Go <strong>USERNAME.github.com</strong> after a while. More guides is in <strong><a href="&lt;http://jekyllrb.com/>" title="Jekyll">Jekyll</a></strong>.<br/>
+Another tool is <strong>rake</strong>. You can install it now.</p>
+
+<pre><code>$ gem install rake
+</code></pre></blockquote>
 
 <p><strong>Struction of Jekyll</strong></p>
 
@@ -128,6 +132,28 @@ $ git push origin master
 `-- index.html
 </code></pre>
 
+<p><strong>Uses of Jekyll</strong></p>
+
+<blockquote><p>Local testing. <strong>Remember</strong> that once <em>_config.tml</em> changes, it becomes effective after restarting the server.</p>
+
+<pre><code>$ jekyll --server
+</code></pre>
+
+<p>Post one new post.</p>
+
+<pre><code>$ rake post title="YOUR TITLE"
+</code></pre>
+
+<p>You can change the theme by this. Such as change to <em>theme-the-program</em>.</p>
+
+<pre><code>$ rake theme:install git="https://github.com/jekyllbootstrap/theme-the-program.git"
+</code></pre>
+
+<p>Then change to it.</p>
+
+<pre><code>$ rake theme:switch name="the-program"
+</code></pre></blockquote>
+
 <h2>Markdown</h2>
 
 <p>One simple language.</p>
@@ -142,7 +168,17 @@ $ git push origin master
 <p>if you want to use <strong>pygments</strong>:</p>
 
 <pre><code>$ sudo easy_install Pygments
+</code></pre>
+
+<p>then change the <em>_config.yml</em> and restart the server.</p>
+
+<pre><code>markdown: rdiscount
+pygments: true
 </code></pre></blockquote>
+
+<h2>Q&amp;A</h2>
+
+<p>If any question, please <strong><a href="&lt;http://legendlee1314.github.com/contacts.html>" title="Email">contact me</a></strong>.</p>
 
                 <nav class="pagination-link">
                     
@@ -268,7 +304,7 @@ $(document).ready(function() {
 			   
 				<li><a href="/tags.html#Jekyll-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Jekyll-ref']);">Jekyll <span>2</span></a></li>
 	    	   
-				<li><a href="/tags.html#Github-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Github-ref']);">Github <span>1</span></a></li>
+				<li><a href="/tags.html#Github-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Github-ref']);">Github <span>2</span></a></li>
 	    	   
 				<li><a href="/tags.html#Markdown-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Markdown-ref']);">Markdown <span>1</span></a></li>
 	    	   
@@ -277,6 +313,8 @@ $(document).ready(function() {
 				<li><a href="/tags.html#Wordpress-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Wordpress-ref']);">Wordpress <span>1</span></a></li>
 	    	   
 				<li><a href="/tags.html#Django-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Django-ref']);">Django <span>1</span></a></li>
+	    	   
+				<li><a href="/tags.html#Git-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Git-ref']);">Git <span>1</span></a></li>
 	    	  
 		</ul>
 	</div>

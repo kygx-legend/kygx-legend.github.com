@@ -4,13 +4,146 @@
  <title>LorpheuX</title>
  <link href="http://legendlee1314.github.com/atom.xml" rel="self"/>
  <link href="http://legendlee1314.github.com"/>
- <updated>2013-02-19T21:31:49+08:00</updated>
+ <updated>2013-02-20T11:45:47+08:00</updated>
  <id>http://legendlee1314.github.com</id>
  <author>
    <name>LegendLee</name>
    <email>legendlee1314@gmail.com</email>
  </author>
 
+ 
+ <entry>
+   <title>Git Learning</title>
+   <url>/blog/2013/02/20/git-learning</url>
+   <link href="http://legendlee1314.github.com/blog/2013/02/20/git-learning"/>
+   <updated>2013-02-20T00:00:00+08:00</updated>
+   <id>http://legendlee1314.github.com/blog/2013/02/20/git-learning</id>
+   <content type="html">&lt;ul&gt;
+&lt;li&gt;It is not the whole guide, just tell you how to use git by a new user.  If you want to know more, please go &lt;strong&gt;&lt;a href=&quot;&amp;lt;http://www.google.com/&gt;&quot; title=&quot;Google&quot;&gt;this page&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Arrange by &lt;a href=&quot;&amp;lt;http://rogerdudler.github.com/git-guide/index.zh.html&gt;&quot; title=&quot;Git Guide&quot;&gt;git guide&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Imaging that you are installed the &lt;a href=&quot;&amp;lt;https://github.com&gt;&quot; title=&quot;Github&quot;&gt;github&lt;/a&gt; now.&lt;/li&gt;
+&lt;/ul&gt;
+
+
+&lt;blockquote&gt;&lt;p&gt;create a new repository.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ mkdir yourrepo
+$ cd yourrepo
+$ git init
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;or you can checkout a repository.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone /path/to/repository
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;when using a remote server.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git clone username@host:/path/to/repository
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;add file you want.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git add &amp;lt;filename&amp;gt;
+$ git add *
+$ git add .
+$ git add -i ===&amp;gt; interactive
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;remove file you want.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git rm &amp;lt;filename&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;commit changes.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git commit [-a] -m &quot;commit message&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;push your changes.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git push origin master 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;if you have not cloned and want to connect your repository to a remote server.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git remote add origin &amp;lt;server&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;if you also have some problem, you can do the follow.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git pull origin master ===&amp;gt; update
+$ git remote rm origin ===&amp;gt; then add remote again 
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;create branch.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git checkout -b newbranch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;switch branch.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git checkout oldbranch
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;delete branch.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git checkout -d &amp;lt;branch&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;push to remote branch.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git push origin &amp;lt;branch&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;update local repository.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git pull ===&amp;gt; git fetch &amp;amp; git merge
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;in case did something wrong and replace local changes.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git checkout -- &amp;lt;filename&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;reset repository.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git reset --hard [origin/branch]
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;see the differences.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git diff
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;see the status.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git status
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;add tags.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git tag
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;commit with log.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ git log
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;use git GUI.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gitk
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Hints:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Generally not all must you remember. If need help, just see this.&lt;/li&gt;
+&lt;/ul&gt;
+
+</content>
+ </entry>
  
  <entry>
    <title>Summary of making Blog</title>
@@ -25,7 +158,7 @@
  </entry>
  
  <entry>
-   <title>Blog by Github and Jekyll and Markdown</title>
+   <title>Blog by Github &amp Jekyll &amp Markdown</title>
    <url>/blog/2013/02/18/blog-by-jekyll--github</url>
    <link href="http://legendlee1314.github.com/blog/2013/02/18/blog-by-jekyll--github"/>
    <updated>2013-02-18T00:00:00+08:00</updated>
@@ -74,7 +207,11 @@ $ git add .
 $ git push origin master   
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Go &lt;strong&gt;USERNAME.github.com&lt;/strong&gt; after a while. More guides is in &lt;strong&gt;&lt;a href=&quot;&amp;lt;http://jekyllrb.com/&gt;&quot; title=&quot;Jekyll&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;Go &lt;strong&gt;USERNAME.github.com&lt;/strong&gt; after a while. More guides is in &lt;strong&gt;&lt;a href=&quot;&amp;lt;http://jekyllrb.com/&gt;&quot; title=&quot;Jekyll&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt;.&lt;br/&gt;
+Another tool is &lt;strong&gt;rake&lt;/strong&gt;. You can install it now.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ gem install rake
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;strong&gt;Struction of Jekyll&lt;/strong&gt;&lt;/p&gt;
 
@@ -91,6 +228,28 @@ $ git push origin master
 `-- index.html
 &lt;/code&gt;&lt;/pre&gt;
 
+&lt;p&gt;&lt;strong&gt;Uses of Jekyll&lt;/strong&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;p&gt;Local testing. &lt;strong&gt;Remember&lt;/strong&gt; that once &lt;em&gt;_config.tml&lt;/em&gt; changes, it becomes effective after restarting the server.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ jekyll --server
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Post one new post.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ rake post title=&quot;YOUR TITLE&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;You can change the theme by this. Such as change to &lt;em&gt;theme-the-program&lt;/em&gt;.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ rake theme:install git=&quot;https://github.com/jekyllbootstrap/theme-the-program.git&quot;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then change to it.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ rake theme:switch name=&quot;the-program&quot;
+&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+
 &lt;h2&gt;Markdown&lt;/h2&gt;
 
 &lt;p&gt;One simple language.&lt;/p&gt;
@@ -105,7 +264,17 @@ $ git push origin master
 &lt;p&gt;if you want to use &lt;strong&gt;pygments&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ sudo easy_install Pygments
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;then change the &lt;em&gt;_config.yml&lt;/em&gt; and restart the server.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;markdown: rdiscount
+pygments: true
 &lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
+
+&lt;h2&gt;Q&amp;amp;A&lt;/h2&gt;
+
+&lt;p&gt;If any question, please &lt;strong&gt;&lt;a href=&quot;&amp;lt;http://legendlee1314.github.com/contacts.html&gt;&quot; title=&quot;Email&quot;&gt;contact me&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 </content>
  </entry>
  

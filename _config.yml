@@ -26,3 +26,6 @@ follow:
 disqus:
   short_name: lorpheux
 production_url: http://legendlee1314.github.com
+analytics:
+  google: UA-38617326-1
+  baidu: 6ce79452dd7f61208b986b61b835536e

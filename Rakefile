@@ -67,6 +67,7 @@ task :post do
     post.puts "tags: []"
     post.puts "---"
     post.puts "Enjoy Posting Your Blog"
+    post.puts "{% include href.md %}"
   end
 end # task :post
 
