@@ -239,7 +239,7 @@ $(document).ready(function() {
 <script type="text/javascript">
 $(document).ready(function() {
 	var autoNode = $("#auto");     
-	var wordInput = $("#bg_go"); 
+	var wordInput = $("#bg_search"); 
 	var highlightindex = -1;     
 	var timeoutId;     
 	var wordInputOffset = wordInput.offset();     
@@ -282,7 +282,7 @@ $(document).ready(function() {
 							newDivNode.click(function() {     
 								autoNode.hide();     
 								highlightindex = -1;     
-								$("#bg_go").val(wordNode);});     
+								$("#bg_search").val(wordNode);});     
 							flag=true;
 						}
 						i++;
@@ -304,8 +304,8 @@ $(document).ready(function() {
 	}     
 	});     
 	$("#btn_go").click(function() {
-		if($("#bg_go").val()!="") {
-			var wordText = $("#bg_go").val();
+		if($("#bg_search").val()!="") {
+			var wordText = $("#bg_search").val();
 			window.location.href=feed[wordText];
 		}
 	});
@@ -377,6 +377,7 @@ $(document).ready(function() {
 var _bdhmProtocol = (("https:" == document.location.protocol) ? " https://" : " http://");
 document.write(unescape("%3Cscript src='" + _bdhmProtocol + "hm.baidu.com/h.js%3F6ce79452dd7f61208b986b61b835536e' type='text/javascript'%3E%3C/script%3E"));
 </script>
+
 
 
 </body>
