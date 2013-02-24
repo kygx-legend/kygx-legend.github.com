@@ -4,13 +4,41 @@
  <title>LorpheuX</title>
  <link href="http://legendlee1314.github.com/atom.xml" rel="self"/>
  <link href="http://legendlee1314.github.com"/>
- <updated>2013-02-20T21:38:14+08:00</updated>
+ <updated>2013-02-23T19:22:01+08:00</updated>
  <id>http://legendlee1314.github.com</id>
  <author>
    <name>LegendLee</name>
    <email>legendlee1314@gmail.com</email>
  </author>
 
+ <entrys>
+ 
+ <entry>
+   <title>Physics for game developers</title>
+   <url>/blog/2013/02/23/physics-for-game-developers</url>
+   <link href="http://legendlee1314.github.com/blog/2013/02/23/physics-for-game-developers"/>
+   <updated>2013-02-23T00:00:00+08:00</updated>
+   <id>http://legendlee1314.github.com/blog/2013/02/23/physics-for-game-developers</id>
+   <content type="html">&lt;h2&gt;基本概念&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;牛顿运动定律&lt;/strong&gt;（Newton‘s laws of motion）描述物体与力之间的关系。&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;ul&gt;
+&lt;li&gt;第一定律：存在某些参考系，在其中，不受外力的物体都保持静止或匀速直线运动。&lt;/li&gt;
+&lt;li&gt;第二定律：施加于物体的合外力等于此物体的质量与加速度的乘积。&lt;p&gt;$ F=ma $&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;第三定律：当两个物体互相作用时，彼此施加于对方的力，其大小相等、方向相反。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;strong&gt;质量&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;$ m=\int \rho dV = \rho \int dV $&lt;/p&gt;
+
+
+&lt;p&gt;&lt;strong&gt;质心&lt;/strong&gt;
+&lt;strong&gt;转动惯量&lt;/strong&gt;&lt;/p&gt;
+</content>
+ </entry>
  
  <entry>
    <title>Markdown Learning</title>
@@ -18,8 +46,8 @@
    <link href="http://legendlee1314.github.com/blog/2013/02/20/markdown-learning"/>
    <updated>2013-02-20T00:00:00+08:00</updated>
    <id>http://legendlee1314.github.com/blog/2013/02/20/markdown-learning</id>
-   <content type="html">&lt;p&gt;Markdown is a lightweight markup language, originally created by John Gruber with substantial contributions from Aaron Swartz, allowing people &quot;to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML)&quot;. The language takes many cues from existing conventions for marking up plain text in email. In other words, Markdown is a text-to-HTML conversion tool (for web writers). &amp;copy; &lt;a href=&quot;&amp;lt;http://en.wikipedia.org/wiki&gt;&quot; title=&quot;Wiki&quot;&gt;Wiki&lt;/a&gt;. &lt;br/&gt;
-More about Markdown please go &lt;strong&gt;&lt;a href=&quot;&amp;lt;http://en.wikipedia.org/wiki/Markdown&gt;&quot; title=&quot;MarkdownWiki&quot;&gt;Markdown&lt;/a&gt;&lt;/strong&gt; and see.&lt;/p&gt;
+   <content type="html">&lt;p&gt;Markdown is a lightweight markup language, originally created by John Gruber with substantial contributions from Aaron Swartz, allowing people &quot;to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML)&quot;. The language takes many cues from existing conventions for marking up plain text in email. In other words, Markdown is a text-to-HTML conversion tool (for web writers). &amp;copy; &lt;a href=&quot;http://en.wikipedia.org/wiki&quot; title=&quot;Wiki&quot;&gt;Wiki&lt;/a&gt;. &lt;br/&gt;
+More about Markdown please go &lt;strong&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Markdown&quot; title=&quot;MarkdownWiki&quot;&gt;Markdown&lt;/a&gt;&lt;/strong&gt; and see.&lt;/p&gt;
 
 &lt;ul&gt;
 &lt;li&gt;At first, it needs to know that Markdown and html tags can mix except some special tags. The following are the rules that Markdown can identify and resolve.&lt;/li&gt;
@@ -152,9 +180,9 @@ Ex. [Markdown](http://en.wikipedia.com/wiki/Markdown)
    <updated>2013-02-20T00:00:00+08:00</updated>
    <id>http://legendlee1314.github.com/blog/2013/02/20/git-learning</id>
    <content type="html">&lt;ul&gt;
-&lt;li&gt;This is not the whole guide, just tell you how to use git by a new user.  If you want to know more, please go &lt;strong&gt;&lt;a href=&quot;&amp;lt;http://www.google.com/&gt;&quot; title=&quot;Google&quot;&gt;this page&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Arrange by &lt;a href=&quot;&amp;lt;http://rogerdudler.github.com/git-guide/index.zh.html&gt;&quot; title=&quot;Git Guide&quot;&gt;git guide&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Imaging that you are installed the &lt;a href=&quot;&amp;lt;https://github.com&gt;&quot; title=&quot;Github&quot;&gt;github&lt;/a&gt; now.&lt;/li&gt;
+&lt;li&gt;This is not the whole guide, just tell you how to use git by a new user.  If you want to know more, please go &lt;strong&gt;&lt;a href=&quot;http://www.google.com/&quot; title=&quot;Google&quot;&gt;this page&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Arrange by &lt;a href=&quot;http://rogerdudler.github.com/git-guide/index.zh.html&quot; title=&quot;Git Guide&quot;&gt;git guide&lt;/a&gt;.&lt;/li&gt;
+&lt;li&gt;Imaging that you are installed the &lt;a href=&quot;https://github.com/&quot; title=&quot;Github&quot;&gt;github&lt;/a&gt; now.&lt;/li&gt;
 &lt;/ul&gt;
 
 
@@ -291,21 +319,21 @@ $ git remote rm origin ===&amp;gt; then add remote again
  </entry>
  
  <entry>
-   <title>Blog by Github &amp Jekyll &amp Markdown</title>
+   <title>Blog by Github &amp; Jekyll &amp; Markdown</title>
    <url>/blog/2013/02/18/blog-by-jekyll--github</url>
    <link href="http://legendlee1314.github.com/blog/2013/02/18/blog-by-jekyll--github"/>
    <updated>2013-02-18T00:00:00+08:00</updated>
    <id>http://legendlee1314.github.com/blog/2013/02/18/blog-by-jekyll--github</id>
    <content type="html">&lt;h2&gt;Github and Git&lt;/h2&gt;
 
-&lt;blockquote&gt;&lt;p&gt;Go &lt;strong&gt;&lt;a href=&quot;&amp;lt;https://github.com&gt;&quot; title=&quot;Github&quot;&gt;Github&lt;/a&gt;&lt;/strong&gt; to create your &lt;strong&gt;account&lt;/strong&gt; and new &lt;strong&gt;repo&lt;/strong&gt; named your &lt;strong&gt;account name&lt;/strong&gt;. &lt;br/&gt;
+&lt;blockquote&gt;&lt;p&gt;Go &lt;strong&gt;&lt;a href=&quot;https://github.com/&quot; title=&quot;Github&quot;&gt;Github&lt;/a&gt;&lt;/strong&gt; to create your &lt;strong&gt;account&lt;/strong&gt; and new &lt;strong&gt;repo&lt;/strong&gt; named your &lt;strong&gt;account name&lt;/strong&gt;. &lt;br/&gt;
 Initial your local &lt;em&gt;settings&lt;/em&gt; of &lt;strong&gt;git&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
 
-&lt;p&gt;All you need is &lt;strong&gt;&lt;a href=&quot;&amp;lt;https://help.github.com/&gt;&quot; title=&quot;Github Help&quot;&gt;this&lt;/a&gt;&lt;/strong&gt;! Another is &lt;strong&gt;&lt;a href=&quot;&amp;lt;http://rogerdudler.github.com/git-guide/index.zh.html&gt;&quot; title=&quot;Git Guide&quot;&gt;Git Guide by Chinese&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;All you need is &lt;strong&gt;&lt;a href=&quot;https://help.github.com/&quot; title=&quot;Github Help&quot;&gt;this&lt;/a&gt;&lt;/strong&gt;! Another is &lt;strong&gt;&lt;a href=&quot;http://rogerdudler.github.com/git-guide/index.zh.html&quot; title=&quot;Git Guide&quot;&gt;Git Guide by Chinese&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;h2&gt;Jekyll&lt;/h2&gt;
 
-&lt;p&gt;You can see the web site of &lt;strong&gt;&lt;a href=&quot;&amp;lt;http://jekyllrb.com/&gt;&quot; title=&quot;Jekyll&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;You can see the web site of &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Jekyll&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;INSTALL Jekyll&lt;/strong&gt;&lt;/p&gt;
 
@@ -340,7 +368,7 @@ $ git add .
 $ git push origin master   
 &lt;/code&gt;&lt;/pre&gt;
 
-&lt;p&gt;Go &lt;strong&gt;USERNAME.github.com&lt;/strong&gt; after a while. More guides is in &lt;strong&gt;&lt;a href=&quot;&amp;lt;http://jekyllrb.com/&gt;&quot; title=&quot;Jekyll&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt;.&lt;br/&gt;
+&lt;p&gt;Go &lt;strong&gt;USERNAME.github.com&lt;/strong&gt; after a while. More guides is in &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Jekyll&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt;.&lt;br/&gt;
 Another tool is &lt;strong&gt;rake&lt;/strong&gt;. You can install it now.&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ gem install rake
@@ -387,9 +415,9 @@ Another tool is &lt;strong&gt;rake&lt;/strong&gt;. You can install it now.&lt;/p
 
 &lt;p&gt;One simple language.&lt;/p&gt;
 
-&lt;blockquote&gt;&lt;p&gt;You can see &lt;strong&gt;&lt;a href=&quot;&amp;lt;http://wowubuntu.com/markdown/&gt;&quot; title=&quot;MarkdownGuide&quot;&gt;this page&lt;/a&gt;&lt;/strong&gt; or see my other post named &lt;strong&gt;Markdown Learning&lt;/strong&gt;.&lt;/p&gt;
+&lt;blockquote&gt;&lt;p&gt;You can see &lt;strong&gt;&lt;a href=&quot;http://wowubuntu.com/markdown/&quot; title=&quot;MarkdownGuide&quot;&gt;this page&lt;/a&gt;&lt;/strong&gt; or see my other post named &lt;strong&gt;Markdown Learning&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;if you want to use &lt;strong&gt;rdiscountu&lt;/strong&gt;:&lt;/p&gt;
+&lt;p&gt;if you want to use &lt;strong&gt;rdiscount&lt;/strong&gt;:&lt;/p&gt;
 
 &lt;pre&gt;&lt;code&gt;$ gem install rdiscount
 &lt;/code&gt;&lt;/pre&gt;
@@ -407,9 +435,10 @@ pygments: true
 
 &lt;h2&gt;Q&amp;amp;A&lt;/h2&gt;
 
-&lt;p&gt;If any question, please &lt;strong&gt;&lt;a href=&quot;&amp;lt;http://legendlee1314.github.com/contacts.html&gt;&quot; title=&quot;Email&quot;&gt;contact me&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;If any question, please &lt;strong&gt;&lt;a href=&quot;http://legendlee1314.github.com/contacts.html&quot; title=&quot;Email&quot;&gt;contact me&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
 </content>
  </entry>
  
+ </entrys>
  
 </feed>

@@ -1,6 +1,35 @@
 ---
-layout: default
+layout: nil 
 ---
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    **
+    *
+    * Author:         Legend Lee
+    * Contact:        legendlee1314@gmail.com
+    * Theme: 		  designed by PIZn. 
+	* Modified:       by Legend at 2013. 
+    *
+    **
+  -->
+  <meta charset="utf-8" />
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  <meta name="generator" content="Jekyll" />
+  <meta name="author" content="{{ site.author.name }}" />
+  <meta name="description" content="{{ site.description }}" />
+  <link rel="shortcut icon" href="/images/favicon.ico"/>
+  <link rel="stylesheet" href="{{ site.static.css }}" type="text/css" />
+  <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="{{ site.feed }}" />
+	{% include googleanalytics.html %}
+	{% include mathjax.html %}
+</head>
+<body>
+    <script src="{{ site.static.jquery }}"></script>
+    {% include head.html %} 
+  <section id="content">
+    <article id="contenter">
 <section class="content">
 	<div class="content-cnt fn-clear">
 		<div class="main fn-clear">
@@ -28,3 +57,9 @@ layout: default
 		</div>
 	</div>
 </section>
+    </article>
+  </section>
+    {% include foot.html %}
+	{% include baiduanalytics.html %}
+</body>
+</html>

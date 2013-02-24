@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Blog by Github &amp Jekyll &amp Markdown"
+title: "Blog by Github &amp; Jekyll &amp; Markdown"
 description: "搭建个人博客快捷教程"
 category: 
 tags: [Jekyll, Github, Markdown]
@@ -65,7 +65,7 @@ One simple language.
 
 > You can see __[this page][markdownguide]__ or see my other post named __Markdown Learning__.
 
-> if you want to use __rdiscountu__:
+> if you want to use __rdiscount__:
 	$ gem install rdiscount
 > if you want to use __pygments__:
 	$ sudo easy_install Pygments

@@ -16,9 +16,9 @@
   <meta name="generator" content="Jekyll" />
   <meta name="author" content="LegendLee" />
   <meta name="description" content="LorpheuX -- Legend's Blog." />
+  <link rel="shortcut icon" href="/images/favicon.ico"/>
   <link rel="stylesheet" href="/css/style.css" type="text/css" />
   <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
-  <link rel="shortcut icon" href="/images/favicon.ico"/>
 	<script type="text/javascript">
 
 var _gaq = _gaq || [];
@@ -64,6 +64,13 @@ _gaq.push(['_trackPageview']);
 		<div class="main fn-clear">
 			
             	<article class="main-excerpt fn-clear">
+                    <h3 class="main-excerpt-title"><a href="/blog/2013/02/23/physics-for-game-developers" title="Physics for game developers" rel="bookmark" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/23/physics-for-game-developers']);">Physics for game developers</a></h3>
+                    <p class="date"><time pubdate="2013-02-23 00:00:00 +0800">23 Feb 2013</time></p>
+                    <p><<游戏开发物理学>>笔记(updating)</p>
+                   	<p class="more"><a href="/blog/2013/02/23/physics-for-game-developers" title="Read More" rel="nofollow" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/23/physics-for-game-developers']);"><span>&#10149;</span>Read More</a></p>
+                </article>
+            
+            	<article class="main-excerpt fn-clear">
                     <h3 class="main-excerpt-title"><a href="/blog/2013/02/20/markdown-learning" title="Markdown Learning" rel="bookmark" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/20/markdown-learning']);">Markdown Learning</a></h3>
                     <p class="date"><time pubdate="2013-02-20 00:00:00 +0800">20 Feb 2013</time></p>
                     <p>Markdown is a lightweight markup language.</p>
@@ -85,7 +92,7 @@ _gaq.push(['_trackPageview']);
                 </article>
             
             	<article class="main-excerpt fn-clear">
-                    <h3 class="main-excerpt-title"><a href="/blog/2013/02/18/blog-by-jekyll--github" title="Blog by Github &amp Jekyll &amp Markdown" rel="bookmark" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/18/blog-by-jekyll--github']);">Blog by Github &amp Jekyll &amp Markdown</a></h3>
+                    <h3 class="main-excerpt-title"><a href="/blog/2013/02/18/blog-by-jekyll--github" title="Blog by Github &amp; Jekyll &amp; Markdown" rel="bookmark" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/18/blog-by-jekyll--github']);">Blog by Github &amp; Jekyll &amp; Markdown</a></h3>
                     <p class="date"><time pubdate="2013-02-18 00:00:00 +0800">18 Feb 2013</time></p>
                     <p>搭建个人博客快捷教程</p>
                    	<p class="more"><a href="/blog/2013/02/18/blog-by-jekyll--github" title="Read More" rel="nofollow" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/18/blog-by-jekyll--github']);"><span>&#10149;</span>Read More</a></p>
@@ -98,14 +105,14 @@ _gaq.push(['_trackPageview']);
 	<div class="search">
 		<h4 class="title">Search<h4>
 		<input type="text" id="bg_search" placeholder="Search"/>
-		<button id="btn_search" type="button">Search</button>
+		<button id="btn_go" type="button">Go</button>
 		<div id="auto"></div>  
 	</div>
 </div>
 <script type="text/javascript">
 $(document).ready(function() {
 	var autoNode = $("#auto");     
-	var wordInput = $("#bg_search"); 
+	var wordInput = $("#bg_go"); 
 	var highlightindex = -1;     
 	var timeoutId;     
 	var wordInputOffset = wordInput.offset();     
@@ -113,7 +120,7 @@ $(document).ready(function() {
 					.css("top", wordInputOffset.top + wordInput.height() + 9 + "px").css("color", "#333")     
 					.css("left", wordInputOffset.left + "px").css("background", "url(/images/skin.png) repeat 0 0 #f2f2f2")
 					.width(wordInput.width() + 14).css("border-radius", "4px");     
-	var feed;
+	var feed=new Array();
 	wordInput.keyup(function(event) {     
 		var myEvent = event || window.event;     
 		var keyCode = myEvent.keyCode;     
@@ -122,41 +129,37 @@ $(document).ready(function() {
 		if (wordText != "") {     
 		clearTimeout(timeoutId);     
 		timeoutId = setTimeout(function() {     
+			var i=0;
 			$.ajax({
 				type: "get",
 				url: "atom.xml",
 				dataType: "xml",
 				success: function( xmlResponse ) {
-					feed = $( "entry", xmlResponse ).map(function() {
-					return { title: $( "title", this ).text(), url: $("url", this).text() };
-					}).get();
-					var n=8;
+					autoNode.html("");     
 					var flag=false;
-					for(var i=0; i < feed.length && i < n; i++) {
-						if(feed[i].title.indexOf(wordText) != -1) {
-							autoNode.html("");     
-							var wordNode = feed[i].title;     
-							var newDivNode = $("<div>");     
+					$(xmlResponse).find('entry').each(function() {
+					if(i < 5) {
+						if($(this).find('title').text().indexOf(wordText) != -1) {
+							var wordNode = $(this).find('title').text();     
+							var newDivNode = $("<div></div>");     
+							feed[wordNode] = $(this).find('url').text();
 							newDivNode.html(wordNode).appendTo(autoNode);     
 							newDivNode.mouseover(function() {     
 								if (highlightindex != -1) {     
-								autoNode.children("div").eq(highlightindex)     
-								.css("background-color", "#f2f2f2");     
+								autoNode.children("div").eq(highlightindex).css("background-color", "#f2f2f2");     
 								}     
 								highlightindex = i;     
-								$(this).css("background-color", "#B0C4DE");     
-								});     
+								$(this).css("background-color", "#B0C4DE");});     
 							newDivNode.mouseout(function() {     
-								$(this).css("background-color", "#f2f2f2");     
-								});     
+								$(this).css("background-color", "#f2f2f2");});     
 							newDivNode.click(function() {     
 								autoNode.hide();     
 								highlightindex = -1;     
-								$("#bg_search").val(wordNode);     
-								});     
+								$("#bg_go").val(wordNode);});     
 							flag=true;
 						}
-					}
+						i++;
+					}});
 					if(flag){
 						autoNode.show();     
 					} else {
@@ -173,15 +176,10 @@ $(document).ready(function() {
 		}     
 	}     
 	});     
-	$("#btn_search").click(function() {
-		if($("#bg_search").val()!="") {
-		for(var i=0; i < feed.length ; i++) {
-			var wordText = $("#bg_search").val();
-			if(feed[i].title.indexOf(wordText) != -1) {
-				window.location.href=feed[i].url;
-				break;
-			}
-		}
+	$("#btn_go").click(function() {
+		if($("#bg_go").val()!="") {
+			var wordText = $("#bg_go").val();
+			window.location.href=feed[wordText];
 		}
 	});
 });
@@ -205,6 +203,10 @@ $(document).ready(function() {
 				<li><a href="/tags.html#Django-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Django-ref']);">Django <span>1</span></a></li>
 	    	   
 				<li><a href="/tags.html#Git-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Git-ref']);">Git <span>1</span></a></li>
+	    	   
+				<li><a href="/tags.html#Physics-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Physics-ref']);">Physics <span>1</span></a></li>
+	    	   
+				<li><a href="/tags.html#Game-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Game-ref']);">Game <span>1</span></a></li>
 	    	  
 		</ul>
 	</div>
