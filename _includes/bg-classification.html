@@ -2,9 +2,9 @@
 	<h4 class="title">Tags</h4>
 	<div class="tags">
 		<ul class="tag_box inline">
-			  {% for tag in site.tags %} 
-				<li><a href="{{ site.tags_path }}#{{ tag[0] }}-ref" onclick="_hmt.push(['_trackPageview', '{{ site.tags_path }}#{{ tag[0] }}-ref']);">{{ tag[0] }} <span>{{ tag[1].size }}</span></a></li>
-	    	  {% endfor %}
+			{% sorted_keys_for tag in site.tags %}
+				<li><a href="{{ site.tags_path }}#{{ tag }}-ref" onclick="_hmt.push(['_trackPageview', '{{ site.tags_path }}#{{ tag }}-ref']);">{{ tag }} <span>{{ site.tags[tag].size }}</span></a></li>
+			{% endsorted_keys_for %}
 		</ul>
 	</div>
 </div>
