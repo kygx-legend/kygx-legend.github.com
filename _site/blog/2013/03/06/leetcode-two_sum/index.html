@@ -12,7 +12,7 @@
     **
   -->
   <meta charset="utf-8" />
-  <title>Markdown Learning | LorpheuX</title>
+  <title>leetcode >two_sum | LorpheuX</title>
   <meta name="generator" content="Jekyll" />
   <meta name="author" content="LegendLee" />
   <meta name="description" content="LorpheuX -- Legend's Blog." />
@@ -73,141 +73,67 @@ _gaq.push(['_trackPageview']);
 	<div class="content-cnt fn-clear">
 		<div class="main fn-clear">
 			<article class="entry">
-				<h1 class="title">Markdown Learning</h1>
-               	<p class="meta"><time class="date" pubdate="2013-02-20">20 Feb 2013</time> By <a href="/contact.html" class="author" title="author">LegendLee</a><g:plusone size="small"></g:plusone></p>
-               	<p class="description">Markdown is a lightweight markup language.</p>
-				<p class="tags"><a class="tags">Markdown</a><p>
- 			 	<p>Markdown is a lightweight markup language, originally created by John Gruber with substantial contributions from Aaron Swartz, allowing people "to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML)". The language takes many cues from existing conventions for marking up plain text in email. In other words, Markdown is a text-to-HTML conversion tool (for web writers). &copy; <a href="http://en.wikipedia.org/wiki" title="Wiki">Wiki</a>. <br/>
-More about Markdown please go <strong><a href="http://en.wikipedia.org/wiki/Markdown" title="MarkdownWiki">Markdown</a></strong> and see.</p>
+				<h1 class="title">leetcode >two_sum</h1>
+               	<p class="meta"><time class="date" pubdate="2013-03-06">06 Mar 2013</time> By <a href="/contact.html" class="author" title="author">LegendLee</a><g:plusone size="small"></g:plusone></p>
+               	<p class="description">Solution</p>
+				<p class="tags"><a class="tags">LeetCode</a><p>
+ 			 	<h2>Two Sum</h2>
 
-<ul>
-<li>At first, it needs to know that Markdown and html tags can mix except some special tags. The following are the rules that Markdown can identify and resolve.</li>
-</ul>
+<p>Given an array of integers, find two numbers such that they add up to a specific target number.</p>
 
+<p>The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are not zero-based.</p>
 
-<h3>Headings</h3>
+<p>You may assume that each input would have exactly one solution.</p>
 
-<pre><code>First-level heading
-=================== (for any number)
-Second-level heading
-------------------- (for any number)
-# heading (#) ===&gt; h1 
-## heading (##) ===&gt; h2
-### heading (###) ===&gt; h3
-#### heading (####) ===&gt; h4
-##### heading (#####) ===&gt; h5
-###### heading (#######) ===&gt; h6
+<p>Input: numbers={2, 7, 11, 15}, target=9
+Output: index1=1, index2=2</p>
+
+<p>General Solution: Small Test->4ms  Large Test->44ms</p>
+
+<pre><code>vector&lt;int&gt; twoSum(vector&lt;int&gt; &amp;numbers, int target) {
+    // Start typing your C/C++ solution below
+    // DO NOT write int main() function
+    vector&lt;int&gt; result;
+    for(int i=0;i&lt;numbers.size();i++)
+        for(int j=i+1;j&lt;numbers.size();j++){
+            if(numbers[i]+numbers[j]==target){
+                result.push_back(i+1);
+                result.push_back(j+1);
+                break;
+            }
+        }
+    return result;
+}
 </code></pre>
 
-<h3>Paragraphs</h3>
+<p>Improvement: Small Test->8ms  Large Test->12ms</p>
 
-<p>A paragraph is one or more consecutive lines of text separated by one or more blank lines. Normal paragraphs should not be indented with spaces or tabs.</p>
-
-<pre><code>This is a paragraph. It has two sentences.&lt;return&gt;
-&lt;space&gt;
-This is another paragraph. It also has&lt;more than two spaces or tabs&gt;
-two sentences
+<pre><code>vector&lt;int&gt; twoSum2(vector&lt;int&gt; &amp;numbers, int target) {
+    // Start typing your C/C++ solution below
+    // DO NOT write int main() function
+    vector&lt;int&gt; result;
+    bool flag=false;
+    for(int i=0;i&lt;numbers.size();i++)
+        if(numbers[i]&lt;target){
+            for(int j=i+1;j&lt;numbers.size();j++){
+                if(numbers[i]+numbers[j]==target){
+                    result.push_back(i+1);
+                    result.push_back(j+1);
+                    flag=true;
+                    break;
+                }
+            }
+            if(flag)
+                break;
+        }
+    return result;
+}
 </code></pre>
-
-<h3>Line return</h3>
-
-<p>Line breaks inserted in the text are removed from the final result: the web browser is in charge of breaking lines depending on the available space. To force a line break, insert two spaces at the end of the line.</p>
-
-<h3>Lists</h3>
-
-<p>No ordered list with <strong>"*" "+" "-"</strong>. If use other inside this, it needs two indentations.</p>
-
-<pre><code>* An item in a bulleted (unordered) list
-    * A subitem, indented with 4 spaces
-* Another item in a bulleted list
-</code></pre>
-
-<p>Ordered list with <strong>number and "."</strong>.</p>
-
-<pre><code>1. An item in an enumerated (ordered) list
-    1.1. A subitem, indented with 4 spaces
-2. Another item in an enumerated list
-</code></pre>
-
-<h3>Blockquotes</h3>
-
-<p>Use <strong>">"</strong>. The number means the levels. It is nested with others.</p>
-
-<pre><code>&gt; line 1
-&gt; line 2
-&gt; &gt; line 3
-</code></pre>
-
-<h3>Emphasized text</h3>
-
-<pre><code>*emphasis* or _emphasis_  (e.g., italics)
-**strong emphasis** or __strong emphasis__ (e.g., boldface)
-</code></pre>
-
-<h3>Code</h3>
-
-<p>To include code (formatted in monospace font), you can either surround inline code with backticks (`).</p>
-
-<pre><code>Some text with `some code` inside
-</code></pre>
-
-<p>or indent several lines of code by at least four spaces.</p>
-
-<pre><code>    line 1 of code
-    line 2 of code
-    line 3 of code
-</code></pre>
-
-<h3>External links</h3>
-
-<pre><code>[link text here](link.address.here)
-Ex. [Markdown](http://en.wikipedia.com/wiki/Markdown)
-</code></pre>
-
-<p>or</p>
-
-<pre><code>[link text here][linkref]
-</code></pre>
-
-<p>and other place</p>
-
-<pre><code>[linkref]: link.address.here "link title here"
-</code></pre>
-
-<h3>Images</h3>
-
-<pre><code>![Alt text](/path/to/img.jpg "Optional title")
-</code></pre>
-
-<p>or</p>
-
-<pre><code>![Alt text][id]
-</code></pre>
-
-<p>and other place</p>
-
-<pre><code>[id]: url/to/image  "Optional title attribute"
-</code></pre>
-
-<h3>Horizontal rules</h3>
-
-<pre><code>* * *
-***
-*****
-- - -
----------------------------------------
-</code></pre>
-
-<h3>Others</h3>
-
-<p>If want to add <strong>"[ ] ( ) _ * + - ! ` ."</strong>. You can use <strong>"\"</strong>.</p>
 
                 <nav class="pagination-link">
                     
-                    <a class="prev" href="/blog/2013/02/20/git-learning" rel="bookmark">&laquo;&nbsp;Git Learning</a>
+                    <a class="prev" href="/blog/2013/02/27/opengl-notes" rel="bookmark">&laquo;&nbsp;OpenGL notes</a>
                     
-                    
-                    <a class="next" href="/blog/2013/02/23/physics-for-game-developers" rel="bookmark">Physics for game developers&nbsp;&raquo;</a>
                     
                  </nav>
 			</article><!-- .entry -->		

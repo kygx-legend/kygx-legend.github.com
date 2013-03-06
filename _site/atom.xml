@@ -4,7 +4,7 @@
  <title>LorpheuX</title>
  <link href="http://legendlee1314.github.com/atom.xml" rel="self"/>
  <link href="http://legendlee1314.github.com"/>
- <updated>2013-02-25T12:01:33+08:00</updated>
+ <updated>2013-03-06T12:19:45+08:00</updated>
  <id>http://legendlee1314.github.com</id>
  <author>
    <name>LegendLee</name>
@@ -14,30 +14,27 @@
  <entrys>
  
  <entry>
+   <title>leetcode >two_sum</title>
+   <url>/blog/2013/03/06/leetcode-two_sum</url>
+   <link href="http://legendlee1314.github.com/blog/2013/03/06/leetcode-two_sum"/>
+   <updated>2013-03-06T00:00:00+08:00</updated>
+   <id>http://legendlee1314.github.com/blog/2013/03/06/leetcode-two_sum</id>
+ </entry>
+ 
+ <entry>
+   <title>OpenGL notes</title>
+   <url>/blog/2013/02/27/opengl-notes</url>
+   <link href="http://legendlee1314.github.com/blog/2013/02/27/opengl-notes"/>
+   <updated>2013-02-27T00:00:00+08:00</updated>
+   <id>http://legendlee1314.github.com/blog/2013/02/27/opengl-notes</id>
+ </entry>
+ 
+ <entry>
    <title>Physics for game developers</title>
    <url>/blog/2013/02/23/physics-for-game-developers</url>
    <link href="http://legendlee1314.github.com/blog/2013/02/23/physics-for-game-developers"/>
    <updated>2013-02-23T00:00:00+08:00</updated>
    <id>http://legendlee1314.github.com/blog/2013/02/23/physics-for-game-developers</id>
-   <content type="html">&lt;h2&gt;基本概念&lt;/h2&gt;
-
-&lt;p&gt;&lt;strong&gt;牛顿运动定律&lt;/strong&gt;（Newton‘s laws of motion）描述物体与力之间的关系。&lt;/p&gt;
-
-&lt;blockquote&gt;&lt;ul&gt;
-&lt;li&gt;第一定律：存在某些参考系，在其中，不受外力的物体都保持静止或匀速直线运动。&lt;/li&gt;
-&lt;li&gt;第二定律：施加于物体的合外力等于此物体的质量与加速度的乘积。&lt;p&gt;$ F=ma $&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;第三定律：当两个物体互相作用时，彼此施加于对方的力，其大小相等、方向相反。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;质量&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;$ m=\int \rho dV = \rho \int dV $&lt;/p&gt;
-
-
-&lt;p&gt;&lt;strong&gt;质心&lt;/strong&gt;
-&lt;strong&gt;转动惯量&lt;/strong&gt;&lt;/p&gt;
-</content>
  </entry>
  
  <entry>
@@ -46,131 +43,6 @@
    <link href="http://legendlee1314.github.com/blog/2013/02/20/markdown-learning"/>
    <updated>2013-02-20T00:00:00+08:00</updated>
    <id>http://legendlee1314.github.com/blog/2013/02/20/markdown-learning</id>
-   <content type="html">&lt;p&gt;Markdown is a lightweight markup language, originally created by John Gruber with substantial contributions from Aaron Swartz, allowing people &quot;to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML)&quot;. The language takes many cues from existing conventions for marking up plain text in email. In other words, Markdown is a text-to-HTML conversion tool (for web writers). &amp;copy; &lt;a href=&quot;http://en.wikipedia.org/wiki&quot; title=&quot;Wiki&quot;&gt;Wiki&lt;/a&gt;. &lt;br/&gt;
-More about Markdown please go &lt;strong&gt;&lt;a href=&quot;http://en.wikipedia.org/wiki/Markdown&quot; title=&quot;MarkdownWiki&quot;&gt;Markdown&lt;/a&gt;&lt;/strong&gt; and see.&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;At first, it needs to know that Markdown and html tags can mix except some special tags. The following are the rules that Markdown can identify and resolve.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;h3&gt;Headings&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;First-level heading
-=================== (for any number)
-Second-level heading
-------------------- (for any number)
-# heading (#) ===&amp;gt; h1 
-## heading (##) ===&amp;gt; h2
-### heading (###) ===&amp;gt; h3
-#### heading (####) ===&amp;gt; h4
-##### heading (#####) ===&amp;gt; h5
-###### heading (#######) ===&amp;gt; h6
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Paragraphs&lt;/h3&gt;
-
-&lt;p&gt;A paragraph is one or more consecutive lines of text separated by one or more blank lines. Normal paragraphs should not be indented with spaces or tabs.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;This is a paragraph. It has two sentences.&amp;lt;return&amp;gt;
-&amp;lt;space&amp;gt;
-This is another paragraph. It also has&amp;lt;more than two spaces or tabs&amp;gt;
-two sentences
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Line return&lt;/h3&gt;
-
-&lt;p&gt;Line breaks inserted in the text are removed from the final result: the web browser is in charge of breaking lines depending on the available space. To force a line break, insert two spaces at the end of the line.&lt;/p&gt;
-
-&lt;h3&gt;Lists&lt;/h3&gt;
-
-&lt;p&gt;No ordered list with &lt;strong&gt;&quot;*&quot; &quot;+&quot; &quot;-&quot;&lt;/strong&gt;. If use other inside this, it needs two indentations.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;* An item in a bulleted (unordered) list
-    * A subitem, indented with 4 spaces
-* Another item in a bulleted list
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Ordered list with &lt;strong&gt;number and &quot;.&quot;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;1. An item in an enumerated (ordered) list
-    1.1. A subitem, indented with 4 spaces
-2. Another item in an enumerated list
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Blockquotes&lt;/h3&gt;
-
-&lt;p&gt;Use &lt;strong&gt;&quot;&gt;&quot;&lt;/strong&gt;. The number means the levels. It is nested with others.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;gt; line 1
-&amp;gt; line 2
-&amp;gt; &amp;gt; line 3
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Emphasized text&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;*emphasis* or _emphasis_  (e.g., italics)
-**strong emphasis** or __strong emphasis__ (e.g., boldface)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Code&lt;/h3&gt;
-
-&lt;p&gt;To include code (formatted in monospace font), you can either surround inline code with backticks (`).&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;Some text with `some code` inside
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or indent several lines of code by at least four spaces.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;    line 1 of code
-    line 2 of code
-    line 3 of code
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;External links&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;[link text here](link.address.here)
-Ex. [Markdown](http://en.wikipedia.com/wiki/Markdown)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[link text here][linkref]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and other place&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[linkref]: link.address.here &quot;link title here&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Images&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;![Alt text](/path/to/img.jpg &quot;Optional title&quot;)
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;![Alt text][id]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;and other place&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;[id]: url/to/image  &quot;Optional title attribute&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Horizontal rules&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;* * *
-***
-*****
-- - -
----------------------------------------
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3&gt;Others&lt;/h3&gt;
-
-&lt;p&gt;If want to add &lt;strong&gt;&quot;[ ] ( ) _ * + - ! ` .&quot;&lt;/strong&gt;. You can use &lt;strong&gt;&quot;\&quot;&lt;/strong&gt;.&lt;/p&gt;
-</content>
  </entry>
  
  <entry>
@@ -179,131 +51,6 @@ Ex. [Markdown](http://en.wikipedia.com/wiki/Markdown)
    <link href="http://legendlee1314.github.com/blog/2013/02/20/git-learning"/>
    <updated>2013-02-20T00:00:00+08:00</updated>
    <id>http://legendlee1314.github.com/blog/2013/02/20/git-learning</id>
-   <content type="html">&lt;ul&gt;
-&lt;li&gt;This is not the whole guide, just tell you how to use git by a new user.  If you want to know more, please go &lt;strong&gt;&lt;a href=&quot;http://www.google.com/&quot; title=&quot;Google&quot;&gt;this page&lt;/a&gt;&lt;/strong&gt;.&lt;/li&gt;
-&lt;li&gt;Arrange by &lt;a href=&quot;http://rogerdudler.github.com/git-guide/index.zh.html&quot; title=&quot;Git Guide&quot;&gt;git guide&lt;/a&gt;.&lt;/li&gt;
-&lt;li&gt;Imaging that you are installed the &lt;a href=&quot;https://github.com/&quot; title=&quot;Github&quot;&gt;github&lt;/a&gt; now.&lt;/li&gt;
-&lt;/ul&gt;
-
-
-&lt;blockquote&gt;&lt;p&gt;create a new repository.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ mkdir yourrepo
-$ cd yourrepo
-$ git init
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;or you can checkout a repository.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git clone /path/to/repository
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;when using a remote server.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git clone username@host:/path/to/repository
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;add file you want.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git add &amp;lt;filename&amp;gt;
-$ git add *
-$ git add .
-$ git add -i ===&amp;gt; interactive
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;remove file you want.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git rm &amp;lt;filename&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;commit changes.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git commit [-a] -m &quot;commit message&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;push your changes.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git push origin master 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;if you have not cloned and want to connect your repository to a remote server.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git remote add origin &amp;lt;server&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;if you also have some problem, you can do the follow.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git pull origin master ===&amp;gt; update
-$ git remote rm origin ===&amp;gt; then add remote again 
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;create branch.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git checkout -b newbranch
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;switch branch.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git checkout oldbranch
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;delete branch.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git checkout -d &amp;lt;branch&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;push to remote branch.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git push origin &amp;lt;branch&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;update local repository.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git pull ===&amp;gt; git fetch &amp;amp; git merge
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;in case did something wrong and replace local changes.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git checkout -- &amp;lt;filename&amp;gt;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;reset repository.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git reset --hard [origin/branch]
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;see the differences.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git diff
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;see the status.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git status
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;add tags.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git tag
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;commit with log.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git log
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;use git GUI.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ gitk
-&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;Hints:&lt;/p&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Generally not all must you remember. If need help, just see this.&lt;/li&gt;
-&lt;/ul&gt;
-
-</content>
  </entry>
  
  <entry>
@@ -312,10 +59,6 @@ $ git remote rm origin ===&amp;gt; then add remote again
    <link href="http://legendlee1314.github.com/blog/2013/02/19/summary-of-making-blog"/>
    <updated>2013-02-19T00:00:00+08:00</updated>
    <id>http://legendlee1314.github.com/blog/2013/02/19/summary-of-making-blog</id>
-   <content type="html">&lt;p&gt;折腾了很久，终于将自己的第一个博客搭好了，而且基本上没有什么不满意的，之后的就是慢慢进行小修改和post博文了。鉴于有很多东西需要总结，Record是最重要的。学着搭自己的博客的同时虽然说是折腾，但是还是能学到很多东西的，尤其对于上学期刚学完计算机网络，对于应用层这块也有新的理解。&lt;/p&gt;
-
-&lt;p&gt;作为一个IT民工，其中一个老师就是google，百度也可以（在你不能伸手出去的时候扶你一把），所以很多时候遇到问题查后的大多数能解决网页基本上都是一些大牛的技术博客，鉴于自己很想有个空间记录学过的知识，也能延续高中时的博文兴趣，就想拥有一个属于自己的博客，不过不知道是不是因为自己也是一个码农，试过很多开放的博客平台，始终没有合心的，总的来说就是不够随心所欲，也不够快捷。之后就萌生了不如自己写吧，于是开始找框架，一开始一个身边的大牛就推荐过Wordpress，对于一个懒而专心于写博文的人来说，Wordpress确实是非常好的平台，因为已经写好，基本上只要学会打一个服务器，例如wamp、lamp就可以了，不过个人不太喜欢这些大众的风格，虽然上面也有非常多的style挑选，或许会问，你不会自己改吗？答案就是因为它写得太全了，而且是用php写的，所以就不太想看，纯属个人习惯。放弃了Wordpress之后由于师兄的关系也接触到了Django框架，由于对C#、.net、ASP不感兴趣，而觉得JAVA、JSP太繁重，执着于对Python轻便的苦衷，果断地投入了进去，后来发现Django太笨重了，适合于大型的项目开发，而且只是搭个博客就要一个人写前端加后台，感觉乏力，因为本来就不是网站开发者，不过投入的这段时间还是学会了不少动态网页开发的东西。而最后发现了Jekyll，然后就喜欢上了，因为是静态生成网页，安全因素基本不需要考虑，而且还可以加入一些元素使其看起来也有动态的部分，例如搜索功能，可以理解为伪动态。用markdown写也不需要考虑太多的东西，感觉上没有什么不妥的地方，先写这么多，之后有时间就分开将Wordpress、Django、Jekyll分别做下详细说明。&lt;/p&gt;
-</content>
  </entry>
  
  <entry>
@@ -324,119 +67,6 @@ $ git remote rm origin ===&amp;gt; then add remote again
    <link href="http://legendlee1314.github.com/blog/2013/02/18/blog-by-jekyll--github"/>
    <updated>2013-02-18T00:00:00+08:00</updated>
    <id>http://legendlee1314.github.com/blog/2013/02/18/blog-by-jekyll--github</id>
-   <content type="html">&lt;h2&gt;Github and Git&lt;/h2&gt;
-
-&lt;blockquote&gt;&lt;p&gt;Go &lt;strong&gt;&lt;a href=&quot;https://github.com/&quot; title=&quot;Github&quot;&gt;Github&lt;/a&gt;&lt;/strong&gt; to create your &lt;strong&gt;account&lt;/strong&gt; and new &lt;strong&gt;repo&lt;/strong&gt; named your &lt;strong&gt;account name&lt;/strong&gt;. &lt;br/&gt;
-Initial your local &lt;em&gt;settings&lt;/em&gt; of &lt;strong&gt;git&lt;/strong&gt;.&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;All you need is &lt;strong&gt;&lt;a href=&quot;https://help.github.com/&quot; title=&quot;Github Help&quot;&gt;this&lt;/a&gt;&lt;/strong&gt;! Another is &lt;strong&gt;&lt;a href=&quot;http://rogerdudler.github.com/git-guide/index.zh.html&quot; title=&quot;Git Guide&quot;&gt;Git Guide by Chinese&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;h2&gt;Jekyll&lt;/h2&gt;
-
-&lt;p&gt;You can see the web site of &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Jekyll&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;INSTALL Jekyll&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;&lt;p&gt;if ruby is installed:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ gem install jekyll
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;if something wrong like needing other dependency:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ sudo apt-get install ruby-dev ruby-full
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;if it is too slow, you can change the source:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ gem sources http://ruby.taobao.org
-&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;WORK With Github&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;&lt;p&gt;You can download the &lt;strong&gt;Jekyll Bootstrap&lt;/strong&gt; for first time.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ git clone https://github.com/plusjade/jekyll-bootstrap.git USERNAME.github.com
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then push your git.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ cd USERNAME.github.com  
-$ git init  
-$ git remote add origin git@github.com:/USERNAME/USERNAME.github.com.git    
-$ git add .   
-$ git push origin master   
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Go &lt;strong&gt;USERNAME.github.com&lt;/strong&gt; after a while. More guides is in &lt;strong&gt;&lt;a href=&quot;http://jekyllrb.com/&quot; title=&quot;Jekyll&quot;&gt;Jekyll&lt;/a&gt;&lt;/strong&gt;.&lt;br/&gt;
-Another tool is &lt;strong&gt;rake&lt;/strong&gt;. You can install it now.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ gem install rake
-&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;&lt;strong&gt;Struction of Jekyll&lt;/strong&gt;&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;.
-|-- _config.yml
-|-- _includes
-|-- _layouts
-|   |-- default.html
-|   |-- page.html
-|   `-- post.html
-|-- _posts
-|   `-- 2007-10-29-post.md
-|-- _site
-`-- index.html
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;&lt;strong&gt;Uses of Jekyll&lt;/strong&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;&lt;p&gt;Local testing. &lt;strong&gt;Remember&lt;/strong&gt; that once &lt;em&gt;_config.tml&lt;/em&gt; changes, it becomes effective after restarting the server.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ jekyll --server
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Post one new post.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ rake post title=&quot;YOUR TITLE&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;You can change the theme by this. Such as change to &lt;em&gt;theme-the-program&lt;/em&gt;.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ rake theme:install git=&quot;https://github.com/jekyllbootstrap/theme-the-program.git&quot;
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then change to it.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ rake theme:switch name=&quot;the-program&quot;
-&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
-
-&lt;h2&gt;Markdown&lt;/h2&gt;
-
-&lt;p&gt;One simple language.&lt;/p&gt;
-
-&lt;blockquote&gt;&lt;p&gt;You can see &lt;strong&gt;&lt;a href=&quot;http://wowubuntu.com/markdown/&quot; title=&quot;MarkdownGuide&quot;&gt;this page&lt;/a&gt;&lt;/strong&gt; or see my other post named &lt;strong&gt;Markdown Learning&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;if you want to use &lt;strong&gt;rdiscount&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ gem install rdiscount
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;if you want to use &lt;strong&gt;pygments&lt;/strong&gt;:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ sudo easy_install Pygments
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;then change the &lt;em&gt;_config.yml&lt;/em&gt; and restart the server.&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;markdown: rdiscount
-pygments: true
-&lt;/code&gt;&lt;/pre&gt;&lt;/blockquote&gt;
-
-&lt;h2&gt;Q&amp;amp;A&lt;/h2&gt;
-
-&lt;p&gt;If any question, please &lt;strong&gt;&lt;a href=&quot;http://legendlee1314.github.com/contacts.html&quot; title=&quot;Email&quot;&gt;contact me&lt;/a&gt;&lt;/strong&gt;.&lt;/p&gt;
-</content>
  </entry>
  
  </entrys>
