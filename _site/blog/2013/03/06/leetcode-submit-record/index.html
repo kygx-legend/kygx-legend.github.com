@@ -12,7 +12,7 @@
     **
   -->
   <meta charset="utf-8" />
-  <title>Summary of making Blog | LorpheuX</title>
+  <title>leetcode submit record | LorpheuX</title>
   <meta name="generator" content="Jekyll" />
   <meta name="author" content="LegendLee" />
   <meta name="description" content="LorpheuX -- Legend's Blog." />
@@ -73,20 +73,169 @@ _gaq.push(['_trackPageview']);
 	<div class="content-cnt fn-clear">
 		<div class="main fn-clear">
 			<article class="entry">
-				<h1 class="title">Summary of making Blog</h1>
-               	<p class="meta"><time class="date" pubdate="2013-02-19">19 Feb 2013</time> By <a href="/contact.html" class="author" title="author">LegendLee</a><g:plusone size="small"></g:plusone></p>
-               	<p class="description">Wordpress -> Django -> Jekyll</p>
-				<p class="tags"><a class="tags">Summary</a><a class="tags">Jekyll</a><a class="tags">Wordpress</a><a class="tags">Django</a><p>
- 			 	<p>折腾了很久，终于将自己的第一个博客搭好了，而且基本上没有什么不满意的，之后的就是慢慢进行小修改和post博文了。鉴于有很多东西需要总结，Record是最重要的。学着搭自己的博客的同时虽然说是折腾，但是还是能学到很多东西的，尤其对于上学期刚学完计算机网络，对于应用层这块也有新的理解。</p>
+				<h1 class="title">leetcode submit record</h1>
+               	<p class="meta"><time class="date" pubdate="2013-03-06">06 Mar 2013</time> By <a href="/contact.html" class="author" title="author">LegendLee</a><g:plusone size="small"></g:plusone></p>
+               	<p class="description">Solution</p>
+				<p class="tags"><a class="tags">LeetCode</a><p>
+ 			 	<h2>3->Add Two Numbers</h2>
 
-<p>作为一个IT民工，其中一个老师就是google，百度也可以（在你不能伸手出去的时候扶你一把），所以很多时候遇到问题查后的大多数能解决网页基本上都是一些大牛的技术博客，鉴于自己很想有个空间记录学过的知识，也能延续高中时的博文兴趣，就想拥有一个属于自己的博客，不过不知道是不是因为自己也是一个码农，试过很多开放的博客平台，始终没有合心的，总的来说就是不够随心所欲，也不够快捷。之后就萌生了不如自己写吧，于是开始找框架，一开始一个身边的大牛就推荐过Wordpress，对于一个懒而专心于写博文的人来说，Wordpress确实是非常好的平台，因为已经写好，基本上只要学会打一个服务器，例如wamp、lamp就可以了，不过个人不太喜欢这些大众的风格，虽然上面也有非常多的style挑选，或许会问，你不会自己改吗？答案就是因为它写得太全了，而且是用php写的，所以就不太想看，纯属个人习惯。放弃了Wordpress之后由于师兄的关系也接触到了Django框架，由于对C#、.net、ASP不感兴趣，而觉得JAVA、JSP太繁重，执着于对Python轻便的苦衷，果断地投入了进去，后来发现Django太笨重了，适合于大型的项目开发，而且只是搭个博客就要一个人写前端加后台，感觉乏力，因为本来就不是网站开发者，不过投入的这段时间还是学会了不少动态网页开发的东西。而最后发现了Jekyll，然后就喜欢上了，因为是静态生成网页，安全因素基本不需要考虑，而且还可以加入一些元素使其看起来也有动态的部分，例如搜索功能，可以理解为伪动态。用markdown写也不需要考虑太多的东西，感觉上没有什么不妥的地方，先写这么多，之后有时间就分开将Wordpress、Django、Jekyll分别做下详细说明。</p>
+<p>You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
+
+<p>Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+Output: 7 -> 0 -> 8</p>
+
+<p>Solution:</p>
+
+<pre><code>ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
+    if(l1==NULL&amp;&amp;l2==NULL)
+        return NULL;
+    ListNode *result;
+    ListNode *sum;
+    ListNode *p1,*p2;
+    sum=result;
+    p1=l1;
+    p2=l2;
+    int tmp=0,carry=0;
+    while(p1!=NULL&amp;&amp;p2!=NULL){
+        tmp=(p1-&gt;val+p2-&gt;val+carry)%10;
+        carry=(p1-&gt;val+p2-&gt;val+carry)/10;
+        sum-&gt;next=new ListNode(tmp);    
+        sum=sum-&gt;next;
+        p1=p1-&gt;next;
+        p2=p2-&gt;next;
+    }
+    while(p1!=NULL){
+        tmp=(p1-&gt;val+carry)%10;
+        carry=(p1-&gt;val+carry)/10;
+        sum-&gt;next=new ListNode(tmp);    
+        sum=sum-&gt;next;
+        p1=p1-&gt;next;
+    }
+    while(p2!=NULL){
+        tmp=(p2-&gt;val+carry)%10;
+        carry=(p2-&gt;val+carry)/10;
+        sum-&gt;next=new ListNode(tmp);    
+        sum=sum-&gt;next;
+        p2=p2-&gt;next;
+    }
+    if(carry)
+        sum-&gt;next=new ListNode(carry);  
+    return result-&gt;next;
+}
+</code></pre>
+
+<h2>2->Longest Substring Without Repeating Characters</h2>
+
+<p>Given a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters for "abcabcbb" is "abc", which the length is 3. For "bbbbb" the longest substring is "b", with the length of 1.</p>
+
+<p>General Solution: Small Test->ms  Large Test->ms</p>
+
+<pre><code>bool isused[26];
+int lengthOfLongestSubstring(string s) {
+    if(s.length()==0)
+        return 0;
+    memset(isused,false,sizeof(isused));    
+    int result=1;
+    for(int i=0;i&lt;s.length();i++){
+        isused[s[i]-'a']=true;
+        for(int j=i+1;j&lt;s.length();j++){
+            if(isused[s[j]-'a']){
+                if(j-i&gt;result)
+                    result=j-i;
+                break;
+            }
+            else
+                isused[s[j]-'a']=true;
+            if(j==s.length()-1){
+                if(j-i+1&gt;result)
+                    result=j-i+1;
+            }
+        }
+        memset(isused,false,sizeof(isused));    
+    }
+    return result;
+}
+</code></pre>
+
+<p>Improvement:
+__max_len[i]=min(max_len[i-1]+1,i-position[i]);position[i] represents the previous position of the letter.</p>
+
+<pre><code>int position[26];
+int lengthOfLongestSubstring2(string s){
+    if(s.length()==0)
+        return 0;
+    memset(position,-1,sizeof(position));
+    int *max_len=new int[s.length()];
+    position[s[0]-'a']=0;
+    max_len[0]=1;
+    int max=1;
+    for(int i=1;i&lt;s.length();i++){
+        if(position[s[i]-'a']!=-1)
+            max_len[i]=min(max_len[i-1]+1,i-position[s[i]-'a']);
+        else
+            max_len[i]=max_len[i-1]+1;
+        max=max&gt;max_len[i]?max:max_len[i];
+        position[s[i]-'a']=i;
+    }
+    return max;
+}
+</code></pre>
+
+<h2>1->Two Sum</h2>
+
+<p>Given an array of integers, find two numbers such that they add up to a specific target number.</p>
+
+<p>The function twoSum should return indices of the two numbers such that they add up to the target, where index1 must be less than index2. Please note that your returned answers (both index1 and index2) are not zero-based.</p>
+
+<p>You may assume that each input would have exactly one solution.</p>
+
+<p>Input: numbers={2, 7, 11, 15}, target=9
+Output: index1=1, index2=2</p>
+
+<p>General Solution: Small Test->4ms  Large Test->44ms</p>
+
+<pre><code>vector&lt;int&gt; twoSum(vector&lt;int&gt; &amp;numbers, int target) {
+    vector&lt;int&gt; result;
+    for(int i=0;i&lt;numbers.size();i++)
+        for(int j=i+1;j&lt;numbers.size();j++){
+            if(numbers[i]+numbers[j]==target){
+                result.push_back(i+1);
+                result.push_back(j+1);
+                break;
+            }
+        }
+    return result;
+}
+</code></pre>
+
+<p>Improvement: Small Test->8ms  Large Test->12ms</p>
+
+<pre><code>vector&lt;int&gt; twoSum2(vector&lt;int&gt; &amp;numbers, int target) {
+    vector&lt;int&gt; result;
+    bool flag=false;
+    for(int i=0;i&lt;numbers.size();i++)
+        if(numbers[i]&lt;target){
+            for(int j=i+1;j&lt;numbers.size();j++){
+                if(numbers[i]+numbers[j]==target){
+                    result.push_back(i+1);
+                    result.push_back(j+1);
+                    flag=true;
+                    break;
+                }
+            }
+            if(flag)
+                break;
+        }
+    return result;
+}
+</code></pre>
 
                 <nav class="pagination-link">
                     
-                    <a class="prev" href="/blog/2013/02/18/blog-by-jekyll--github" rel="bookmark">&laquo;&nbsp;Blog by Github &amp; Jekyll...</a>
+                    <a class="prev" href="/blog/2013/02/27/opengl-notes" rel="bookmark">&laquo;&nbsp;OpenGL notes</a>
                     
                     
-                    <a class="next" href="/blog/2013/02/20/git-learning" rel="bookmark">Git Learning&nbsp;&raquo;</a>
+                    <a class="next" href="/blog/2013/03/08/ros-middleware" rel="bookmark">ROS Middleware&nbsp;&raquo;</a>
                     
                  </nav>
 			</article><!-- .entry -->		
