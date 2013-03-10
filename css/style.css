@@ -1,6 +1,6 @@
 /**
  *
- * @theme: Black Cube
+ * @theme: Black LorpheuX
  * @auther: Legend
  * @email: legendlee1314@gmail.com
  * @date: 2013-02-18
@@ -78,7 +78,7 @@ body                        { background: url(/images/body-bg3.jpg) repeat 0 0; 
 .content-cnt                { width: 900px; margin:  30px auto; height:  auto; }
 .content-cnt .main          { width: 610px; height: auto; margin-right: 40px; float: left; }
 .content-cnt .main .comments{ font-size: 20px; color: #ddd; }
-.content-cnt .main-excerpt  { background: url(/images/body-bg2.jpg) repeat 0 0; border-radius: 10px; margin-bottom: 20px; padding: 10px 0; border-bottom: 1px dashed #bebebe; }
+.content-cnt .main-excerpt  { background: url(/images/body-bg4.jpg) repeat 0 0; border-radius: 10px; margin-bottom: 20px; padding: 10px 0; border-bottom: 1px dashed #bebebe; }
 .content-cnt .main-excerpt .date 
                             { font-style: italic; color: #fff; }
 .content-cnt .main-excerpt-title 
@@ -173,7 +173,7 @@ body                        { background: url(/images/body-bg3.jpg) repeat 0 0; 
                 text
 --------------------------------------------*/
 /** entry **/
-.entry                      { background: url(/images/body-bg2.jpg) repeat 0 0; padding: 10px; border-radius: 10px; color: #eeeeee; font-family: Georgia, "Microsoft Yahei","Microsoft Jhenghei",STHeiti,PMingLiU,Simsun; }
+.entry                      { background: url(/images/body-bg4.jpg) repeat 0 0; padding: 10px; border-radius: 10px; color: #eeeeee; font-family: Georgia, "Microsoft Yahei","Microsoft Jhenghei",STHeiti,PMingLiU,Simsun; }
 .entry h1, .entry h2, .entry h3, .entry h4, .entry h5, .entry h6 
                             { font-weight: bold; color: #6495ED; margin-top: 30px; padding: 0; font-family: UbuntuMono-B, consolas, monaco, monospace, "Microsoft Yahei","Microsoft Jhenghei"; }
 .entry h1                   { padding: 3px 0; font-size: 30px; line-height: normal; margin-bottom: 20px; font-weight: 700; border-bottom: 1px dashed #a8a8a8; }
