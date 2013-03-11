@@ -90,7 +90,7 @@ body                        { background: url(/images/body-bg3.jpg) repeat 0 0; 
 .content-cnt .main-excerpt p a:hover              
 							{ background: #111111; border-bottom: 1px solid #777; text-decoration: none; }
 .content-cnt .main-excerpt-title a 
-                            { color: #eee; }
+                            { color: #39b; }
 .content-cnt .main-excerpt .more 
                             { text-align: right; font-family: Verdana; color: #eee; font-size: 12px; }
 .content-cnt .main-excerpt .more a

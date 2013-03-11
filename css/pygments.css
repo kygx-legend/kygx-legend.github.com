@@ -10,7 +10,7 @@
 .p { color: #cccccc } /* Punctuation */
 .cm { color: #ff0080 } /* Comment.Multiline */
 .cp { color: #ff0080 } /* Comment.Preproc */
-.c1 { color: #ff0080 } /* Comment.Single */
+.c1 { color: #03090b } /* Comment.Single */
 .cs { color: #cd0000; font-weight: bold } /* Comment.Special */
 .gd { color: #cd0000 } /* Generic.Deleted */
 .ge { color: #cccccc; font-style: italic } /* Generic.Emph */
