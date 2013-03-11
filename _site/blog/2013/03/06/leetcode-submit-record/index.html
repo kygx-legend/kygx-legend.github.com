@@ -18,6 +18,7 @@
   <meta name="description" content="LorpheuX -- Legend's Blog." />
   <link rel="shortcut icon" href="/images/favicon.ico"/>
   <link rel="stylesheet" href="/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
   <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
 	<script type="text/javascript">
 
@@ -100,24 +101,25 @@ isMatch("aab", "c*a*b") → true
 
 <p>Solution:</p>
 
-<pre><code>bool isMatch(const char *s, const char *p) {
-    if(*p==0)
-        return *s==0;
-    if(*(p+1)!='*'){
-        if(*p==*s||*p=='.'&amp;&amp;*s!=0)
-            return isMatch(s+1,p+1);
-        return false;
-    }
-    else{
-        while(*p==*s||*p=='.'&amp;&amp;*s!=0){
-            if(isMatch(s,p+2))
-                return true;
-            s++;
-        }
-        return isMatch(s,p+2);
-    }
-}
-</code></pre>
+<div class="highlight"><pre><code class="c++"><span class="kt">bool</span> <span class="n">isMatch</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">s</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">p</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="o">*</span><span class="n">s</span><span class="o">==</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">*</span><span class="p">(</span><span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">!=</span><span class="sc">&#39;*&#39;</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="o">==*</span><span class="n">s</span><span class="o">||*</span><span class="n">p</span><span class="o">==</span><span class="sc">&#39;.&#39;</span><span class="o">&amp;&amp;*</span><span class="n">s</span><span class="o">!=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">isMatch</span><span class="p">(</span><span class="n">s</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">p</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span>
+        <span class="k">while</span><span class="p">(</span><span class="o">*</span><span class="n">p</span><span class="o">==*</span><span class="n">s</span><span class="o">||*</span><span class="n">p</span><span class="o">==</span><span class="sc">&#39;.&#39;</span><span class="o">&amp;&amp;*</span><span class="n">s</span><span class="o">!=</span><span class="mi">0</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">isMatch</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">p</span><span class="o">+</span><span class="mi">2</span><span class="p">))</span>
+                <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+            <span class="n">s</span><span class="o">++</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="n">isMatch</span><span class="p">(</span><span class="n">s</span><span class="p">,</span><span class="n">p</span><span class="o">+</span><span class="mi">2</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
 
 <h3>6->Palindrome Number</h3>
 
@@ -125,25 +127,26 @@ isMatch("aab", "c*a*b") → true
 
 <p>Solution:</p>
 
-<pre><code>bool isPalindrome(int x) {
-    if(x&gt;=0){
-        vector&lt;int&gt; num;
-        while(x!=0){
-            num.push_back(x%10);
-            x/=10;
-        }   
-        int n=num.size();
-        for(int i=0;i&lt;(n+1)/2;i++){
-            if(num[i]!=num[n-i-1])
-                return false;
-        }
-        return true;
-    }
-    else{
-        return false;
-    }
-}
-</code></pre>
+<div class="highlight"><pre><code class="c++"><span class="kt">bool</span> <span class="n">isPalindrome</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">&gt;=</span><span class="mi">0</span><span class="p">){</span>
+        <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">num</span><span class="p">;</span>
+        <span class="k">while</span><span class="p">(</span><span class="n">x</span><span class="o">!=</span><span class="mi">0</span><span class="p">){</span>
+            <span class="n">num</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="mi">10</span><span class="p">);</span>
+            <span class="n">x</span><span class="o">/=</span><span class="mi">10</span><span class="p">;</span>
+        <span class="p">}</span>    
+        <span class="kt">int</span> <span class="n">n</span><span class="o">=</span><span class="n">num</span><span class="p">.</span><span class="n">size</span><span class="p">();</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span><span class="o">/</span><span class="mi">2</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">num</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">!=</span><span class="n">num</span><span class="p">[</span><span class="n">n</span><span class="o">-</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+                <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="kc">true</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span><span class="p">{</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
 
 <h3>5->String To Integer</h3>
 
@@ -155,30 +158,31 @@ isMatch("aab", "c*a*b") → true
 
 <p>Solution:</p>
 
-<pre><code>int atoi(const char *str) {
-    if(str==NULL)
-        return 0;
-    bool flag=false;// 符号标记
-    int res=0;// 结果
-    while(*str==' '){
-        str++;
-    }
-    if(*str=='+'||*str=='-')
-        flag=(*str++!='+');
-    while(*str&gt;='0'&amp;&amp;*str&lt;='9'){
-        if(2147483647/10&gt;=res)
-            res*=10;
-        else
-            return !flag?2147483647:-2147483648;
-        if(2147483647-(*str-'0')&gt;=res)
-            res+=*str-'0';
-        else
-            return !flag?2147483647:-2147483648;
-        str++;
-    }
-    return flag?0-res:res; 
-}
-</code></pre>
+<div class="highlight"><pre><code class="c++"><span class="kt">int</span> <span class="n">atoi</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">str</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">str</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="n">flag</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span><span class="c1">// 符号标记</span>
+    <span class="kt">int</span> <span class="n">res</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="c1">// 结果</span>
+    <span class="k">while</span><span class="p">(</span><span class="o">*</span><span class="n">str</span><span class="o">==</span><span class="sc">&#39; &#39;</span><span class="p">){</span>
+        <span class="n">str</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="o">*</span><span class="n">str</span><span class="o">==</span><span class="sc">&#39;+&#39;</span><span class="o">||*</span><span class="n">str</span><span class="o">==</span><span class="sc">&#39;-&#39;</span><span class="p">)</span>
+        <span class="n">flag</span><span class="o">=</span><span class="p">(</span><span class="o">*</span><span class="n">str</span><span class="o">++!=</span><span class="sc">&#39;+&#39;</span><span class="p">);</span>
+    <span class="k">while</span><span class="p">(</span><span class="o">*</span><span class="n">str</span><span class="o">&gt;=</span><span class="sc">&#39;0&#39;</span><span class="o">&amp;&amp;*</span><span class="n">str</span><span class="o">&lt;=</span><span class="sc">&#39;9&#39;</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="mi">2147483647</span><span class="o">/</span><span class="mi">10</span><span class="o">&gt;=</span><span class="n">res</span><span class="p">)</span>
+            <span class="n">res</span><span class="o">*=</span><span class="mi">10</span><span class="p">;</span>
+        <span class="k">else</span>
+            <span class="k">return</span> <span class="o">!</span><span class="n">flag</span><span class="o">?</span><span class="mi">2147483647</span><span class="o">:-</span><span class="mi">2147483648</span><span class="p">;</span>
+        <span class="k">if</span><span class="p">(</span><span class="mi">2147483647</span><span class="o">-</span><span class="p">(</span><span class="o">*</span><span class="n">str</span><span class="o">-</span><span class="sc">&#39;0&#39;</span><span class="p">)</span><span class="o">&gt;=</span><span class="n">res</span><span class="p">)</span>
+            <span class="n">res</span><span class="o">+=*</span><span class="n">str</span><span class="o">-</span><span class="sc">&#39;0&#39;</span><span class="p">;</span>
+        <span class="k">else</span>
+            <span class="k">return</span> <span class="o">!</span><span class="n">flag</span><span class="o">?</span><span class="mi">2147483647</span><span class="o">:-</span><span class="mi">2147483648</span><span class="p">;</span>
+        <span class="n">str</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">flag</span><span class="o">?</span><span class="mi">0</span><span class="o">-</span><span class="nl">res:</span><span class="n">res</span><span class="p">;</span> 
+<span class="p">}</span>
+</code></pre></div>
+
 
 <h3>4->Reverse Integer</h3>
 
@@ -189,14 +193,15 @@ Example2: x = -123, return -321</p>
 
 <p>Solution:</p>
 
-<pre><code>int reverse(int x) {
-    int result=0;
-    while(x!=0){
-        result=result*10+x%10;
-        x=x/10;
-    }
-}
-</code></pre>
+<div class="highlight"><pre><code class="c++"><span class="kt">int</span> <span class="n">reverse</span><span class="p">(</span><span class="kt">int</span> <span class="n">x</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kt">int</span> <span class="n">result</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">x</span><span class="o">!=</span><span class="mi">0</span><span class="p">){</span>
+        <span class="n">result</span><span class="o">=</span><span class="n">result</span><span class="o">*</span><span class="mi">10</span><span class="o">+</span><span class="n">x</span><span class="o">%</span><span class="mi">10</span><span class="p">;</span>
+        <span class="n">x</span><span class="o">=</span><span class="n">x</span><span class="o">/</span><span class="mi">10</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
 
 <h3>3->Add Two Numbers</h3>
 
@@ -207,43 +212,44 @@ Output: 7 -> 0 -> 8</p>
 
 <p>Solution:</p>
 
-<pre><code>ListNode *addTwoNumbers(ListNode *l1, ListNode *l2) {
-    if(l1==NULL&amp;&amp;l2==NULL)
-        return NULL;
-    ListNode *result;
-    ListNode *sum;
-    ListNode *p1,*p2;
-    sum=result;
-    p1=l1;
-    p2=l2;
-    int tmp=0,carry=0;
-    while(p1!=NULL&amp;&amp;p2!=NULL){
-        tmp=(p1-&gt;val+p2-&gt;val+carry)%10;
-        carry=(p1-&gt;val+p2-&gt;val+carry)/10;
-        sum-&gt;next=new ListNode(tmp);    
-        sum=sum-&gt;next;
-        p1=p1-&gt;next;
-        p2=p2-&gt;next;
-    }
-    while(p1!=NULL){
-        tmp=(p1-&gt;val+carry)%10;
-        carry=(p1-&gt;val+carry)/10;
-        sum-&gt;next=new ListNode(tmp);    
-        sum=sum-&gt;next;
-        p1=p1-&gt;next;
-    }
-    while(p2!=NULL){
-        tmp=(p2-&gt;val+carry)%10;
-        carry=(p2-&gt;val+carry)/10;
-        sum-&gt;next=new ListNode(tmp);    
-        sum=sum-&gt;next;
-        p2=p2-&gt;next;
-    }
-    if(carry)
-        sum-&gt;next=new ListNode(carry);  
-    return result-&gt;next;
-}
-</code></pre>
+<div class="highlight"><pre><code class="c++"><span class="n">ListNode</span> <span class="o">*</span><span class="n">addTwoNumbers</span><span class="p">(</span><span class="n">ListNode</span> <span class="o">*</span><span class="n">l1</span><span class="p">,</span> <span class="n">ListNode</span> <span class="o">*</span><span class="n">l2</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">l1</span><span class="o">==</span><span class="nb">NULL</span><span class="o">&amp;&amp;</span><span class="n">l2</span><span class="o">==</span><span class="nb">NULL</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nb">NULL</span><span class="p">;</span>
+    <span class="n">ListNode</span> <span class="o">*</span><span class="n">result</span><span class="p">;</span>
+    <span class="n">ListNode</span> <span class="o">*</span><span class="n">sum</span><span class="p">;</span>
+    <span class="n">ListNode</span> <span class="o">*</span><span class="n">p1</span><span class="p">,</span><span class="o">*</span><span class="n">p2</span><span class="p">;</span>
+    <span class="n">sum</span><span class="o">=</span><span class="n">result</span><span class="p">;</span>
+    <span class="n">p1</span><span class="o">=</span><span class="n">l1</span><span class="p">;</span>
+    <span class="n">p2</span><span class="o">=</span><span class="n">l2</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">tmp</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">carry</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">p1</span><span class="o">!=</span><span class="nb">NULL</span><span class="o">&amp;&amp;</span><span class="n">p2</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span>
+        <span class="n">tmp</span><span class="o">=</span><span class="p">(</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">val</span><span class="o">+</span><span class="n">p2</span><span class="o">-&gt;</span><span class="n">val</span><span class="o">+</span><span class="n">carry</span><span class="p">)</span><span class="o">%</span><span class="mi">10</span><span class="p">;</span>
+        <span class="n">carry</span><span class="o">=</span><span class="p">(</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">val</span><span class="o">+</span><span class="n">p2</span><span class="o">-&gt;</span><span class="n">val</span><span class="o">+</span><span class="n">carry</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">;</span>
+        <span class="n">sum</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="k">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span>  
+        <span class="n">sum</span><span class="o">=</span><span class="n">sum</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">p1</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span>
+        <span class="n">tmp</span><span class="o">=</span><span class="p">(</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">val</span><span class="o">+</span><span class="n">carry</span><span class="p">)</span><span class="o">%</span><span class="mi">10</span><span class="p">;</span>
+        <span class="n">carry</span><span class="o">=</span><span class="p">(</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">val</span><span class="o">+</span><span class="n">carry</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">;</span>
+        <span class="n">sum</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="k">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span>  
+        <span class="n">sum</span><span class="o">=</span><span class="n">sum</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="n">p1</span><span class="o">=</span><span class="n">p1</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">while</span><span class="p">(</span><span class="n">p2</span><span class="o">!=</span><span class="nb">NULL</span><span class="p">){</span>
+        <span class="n">tmp</span><span class="o">=</span><span class="p">(</span><span class="n">p2</span><span class="o">-&gt;</span><span class="n">val</span><span class="o">+</span><span class="n">carry</span><span class="p">)</span><span class="o">%</span><span class="mi">10</span><span class="p">;</span>
+        <span class="n">carry</span><span class="o">=</span><span class="p">(</span><span class="n">p2</span><span class="o">-&gt;</span><span class="n">val</span><span class="o">+</span><span class="n">carry</span><span class="p">)</span><span class="o">/</span><span class="mi">10</span><span class="p">;</span>
+        <span class="n">sum</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="k">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">tmp</span><span class="p">);</span>  
+        <span class="n">sum</span><span class="o">=</span><span class="n">sum</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+        <span class="n">p2</span><span class="o">=</span><span class="n">p2</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">carry</span><span class="p">)</span>
+        <span class="n">sum</span><span class="o">-&gt;</span><span class="n">next</span><span class="o">=</span><span class="k">new</span> <span class="n">ListNode</span><span class="p">(</span><span class="n">carry</span><span class="p">);</span>    
+    <span class="k">return</span> <span class="n">result</span><span class="o">-&gt;</span><span class="n">next</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
 
 <h3>2->Longest Substring Without Repeating Characters</h3>
 
@@ -251,56 +257,58 @@ Output: 7 -> 0 -> 8</p>
 
 <p>General Solution: Small Test->ms  Large Test->ms</p>
 
-<pre><code>bool isused[26];
-int lengthOfLongestSubstring(string s) {
-    if(s.length()==0)
-        return 0;
-    memset(isused,false,sizeof(isused));    
-    int result=1;
-    for(int i=0;i&lt;s.length();i++){
-        isused[s[i]-'a']=true;
-        for(int j=i+1;j&lt;s.length();j++){
-            if(isused[s[j]-'a']){
-                if(j-i&gt;result)
-                    result=j-i;
-                break;
-            }
-            else
-                isused[s[j]-'a']=true;
-            if(j==s.length()-1){
-                if(j-i+1&gt;result)
-                    result=j-i+1;
-            }
-        }
-        memset(isused,false,sizeof(isused));    
-    }
-    return result;
-}
-</code></pre>
+<div class="highlight"><pre><code class="c++"><span class="kt">bool</span> <span class="n">isused</span><span class="p">[</span><span class="mi">26</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">lengthOfLongestSubstring</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">memset</span><span class="p">(</span><span class="n">isused</span><span class="p">,</span><span class="kc">false</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">isused</span><span class="p">));</span> 
+    <span class="kt">int</span> <span class="n">result</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="n">isused</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">isused</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">&gt;</span><span class="n">result</span><span class="p">)</span>
+                    <span class="n">result</span><span class="o">=</span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="p">;</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+            <span class="k">else</span>
+                <span class="n">isused</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">==</span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="o">-</span><span class="mi">1</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">&gt;</span><span class="n">result</span><span class="p">)</span>
+                    <span class="n">result</span><span class="o">=</span><span class="n">j</span><span class="o">-</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+        <span class="n">memset</span><span class="p">(</span><span class="n">isused</span><span class="p">,</span><span class="kc">false</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">isused</span><span class="p">));</span> 
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
 
 <p>Improvement:
 __max_len[i]=min(max_len[i-1]+1,i-position[i]);position[i] represents the previous position of the letter.</p>
 
-<pre><code>int position[26];
-int lengthOfLongestSubstring2(string s){
-    if(s.length()==0)
-        return 0;
-    memset(position,-1,sizeof(position));
-    int *max_len=new int[s.length()];
-    position[s[0]-'a']=0;
-    max_len[0]=1;
-    int max=1;
-    for(int i=1;i&lt;s.length();i++){
-        if(position[s[i]-'a']!=-1)
-            max_len[i]=min(max_len[i-1]+1,i-position[s[i]-'a']);
-        else
-            max_len[i]=max_len[i-1]+1;
-        max=max&gt;max_len[i]?max:max_len[i];
-        position[s[i]-'a']=i;
-    }
-    return max;
-}
-</code></pre>
+<div class="highlight"><pre><code class="c++"><span class="kt">int</span> <span class="n">position</span><span class="p">[</span><span class="mi">26</span><span class="p">];</span>
+<span class="kt">int</span> <span class="n">lengthOfLongestSubstring2</span><span class="p">(</span><span class="n">string</span> <span class="n">s</span><span class="p">){</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()</span><span class="o">==</span><span class="mi">0</span><span class="p">)</span>
+        <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">memset</span><span class="p">(</span><span class="n">position</span><span class="p">,</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span><span class="k">sizeof</span><span class="p">(</span><span class="n">position</span><span class="p">));</span>
+    <span class="kt">int</span> <span class="o">*</span><span class="n">max_len</span><span class="o">=</span><span class="k">new</span> <span class="kt">int</span><span class="p">[</span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">()];</span>
+    <span class="n">position</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span>
+    <span class="n">max_len</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">max</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">1</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">s</span><span class="p">.</span><span class="n">length</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">){</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">position</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">!=-</span><span class="mi">1</span><span class="p">)</span>
+            <span class="n">max_len</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">min</span><span class="p">(</span><span class="n">max_len</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span><span class="n">i</span><span class="o">-</span><span class="n">position</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]);</span>
+        <span class="k">else</span>
+            <span class="n">max_len</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">=</span><span class="n">max_len</span><span class="p">[</span><span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span>
+        <span class="n">max</span><span class="o">=</span><span class="n">max</span><span class="o">&gt;</span><span class="n">max_len</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">?</span><span class="nl">max:</span><span class="n">max_len</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+        <span class="n">position</span><span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">-</span><span class="sc">&#39;a&#39;</span><span class="p">]</span><span class="o">=</span><span class="n">i</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="n">max</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
 
 <h3>1->Two Sum</h3>
 
@@ -315,41 +323,45 @@ Output: index1=1, index2=2</p>
 
 <p>General Solution: Small Test->4ms  Large Test->44ms</p>
 
-<pre><code>vector&lt;int&gt; twoSum(vector&lt;int&gt; &amp;numbers, int target) {
-    vector&lt;int&gt; result;
-    for(int i=0;i&lt;numbers.size();i++)
-        for(int j=i+1;j&lt;numbers.size();j++){
-            if(numbers[i]+numbers[j]==target){
-                result.push_back(i+1);
-                result.push_back(j+1);
-                break;
-            }
-        }
-    return result;
-}
-</code></pre>
+<div class="highlight"><pre><code class="c++"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">twoSum</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">numbers</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">result</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">numbers</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">numbers</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">numbers</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="n">target</span><span class="p">){</span>
+                <span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+                <span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+                <span class="k">break</span><span class="p">;</span>
+            <span class="p">}</span>
+        <span class="p">}</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
 
 <p>Improvement: Small Test->8ms  Large Test->12ms</p>
 
-<pre><code>vector&lt;int&gt; twoSum2(vector&lt;int&gt; &amp;numbers, int target) {
-    vector&lt;int&gt; result;
-    bool flag=false;
-    for(int i=0;i&lt;numbers.size();i++)
-        if(numbers[i]&lt;target){
-            for(int j=i+1;j&lt;numbers.size();j++){
-                if(numbers[i]+numbers[j]==target){
-                    result.push_back(i+1);
-                    result.push_back(j+1);
-                    flag=true;
-                    break;
-                }
-            }
-            if(flag)
-                break;
-        }
-    return result;
-}
-</code></pre>
+<div class="highlight"><pre><code class="c++"><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">twoSum2</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">numbers</span><span class="p">,</span> <span class="kt">int</span> <span class="n">target</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int</span><span class="o">&gt;</span> <span class="n">result</span><span class="p">;</span>
+    <span class="kt">bool</span> <span class="n">flag</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="n">numbers</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+        <span class="k">if</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">&lt;</span><span class="n">target</span><span class="p">){</span>
+            <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">;</span><span class="n">j</span><span class="o">&lt;</span><span class="n">numbers</span><span class="p">.</span><span class="n">size</span><span class="p">();</span><span class="n">j</span><span class="o">++</span><span class="p">){</span>
+                <span class="k">if</span><span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">+</span><span class="n">numbers</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">==</span><span class="n">target</span><span class="p">){</span>
+                    <span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+                    <span class="n">result</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="p">);</span>
+                    <span class="n">flag</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
+                    <span class="k">break</span><span class="p">;</span>
+                <span class="p">}</span>
+            <span class="p">}</span>
+            <span class="k">if</span><span class="p">(</span><span class="n">flag</span><span class="p">)</span>
+                <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
 
                 <nav class="pagination-link">
                     

@@ -16,6 +16,7 @@ tags_path: /tags.html
 feed: /atom.xml
 static:
   css: /css/style.css
+  css_pygments: /css/pygments.css
   jquery: /js/jquery.min.js
 blogName: LorpheuX
 blogDesc: Legend's Blog

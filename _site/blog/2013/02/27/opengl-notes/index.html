@@ -18,6 +18,7 @@
   <meta name="description" content="LorpheuX -- Legend's Blog." />
   <link rel="shortcut icon" href="/images/favicon.ico"/>
   <link rel="stylesheet" href="/css/style.css" type="text/css" />
+  <link rel="stylesheet" href="/css/pygments.css" type="text/css" />
   <link rel="alternate" type="application/atom+xml" title="Recent Entries" href="/atom.xml" />
 	<script type="text/javascript">
 
@@ -79,26 +80,28 @@ _gaq.push(['_trackPageview']);
 				<p class="tags"><a class="tags">OpenGL</a><a class="tags">Note</a><p>
  			 	<p>INSTALL AT UBUNTU</p>
 
-<pre><code>sudo apt-get install mesa-common-dev
-sudo apt-get install freeglut3-dev
+<pre><code>$ sudo apt-get install mesa-common-dev
+$ sudo apt-get install freeglut3-dev
 </code></pre>
 
 <p>INCLUDE
 Use glut. Use the follow only.</p>
 
-<pre><code>#include "GL/freeglut.h"
-</code></pre>
+<div class="highlight"><pre><code class="c++"><span class="cp">#include &quot;GL/freeglut.h&quot;</span>
+</code></pre></div>
+
 
 <p>Others.</p>
 
-<pre><code>#include "GL/gl.h"
-#include "GL/glu.h"
-</code></pre>
+<div class="highlight"><pre><code class="c++"><span class="cp">#include &quot;GL/gl.h&quot;</span>
+<span class="cp">#include &quot;GL/glu.h&quot;</span>
+</code></pre></div>
+
 
 <p>COMPILE &amp; RUN
 Add -lglut which means link glut.</p>
 
-<pre><code>gcc/g++ program.\{c/h\} -lglut
+<pre><code>$ gcc/g++ program.\{c/h\} -lglut
 </code></pre>
 
                 <nav class="pagination-link">

@@ -7,17 +7,21 @@ tags: [OpenGL, Note]
 ---
 
 INSTALL AT UBUNTU
-	sudo apt-get install mesa-common-dev
-	sudo apt-get install freeglut3-dev
+	$ sudo apt-get install mesa-common-dev
+	$ sudo apt-get install freeglut3-dev
 INCLUDE
 Use glut. Use the follow only.
-	#include "GL/freeglut.h"
+{% highlight c++ %}
+#include "GL/freeglut.h"
+{% endhighlight %}
 Others.
-	#include "GL/gl.h"
-	#include "GL/glu.h"
+{% highlight c++ %}
+#include "GL/gl.h"
+#include "GL/glu.h"
+{% endhighlight %}
 COMPILE &amp; RUN
 Add -lglut which means link glut.
-	gcc/g++ program.\{c/h\} -lglut
+	$ gcc/g++ program.\{c/h\} -lglut
 
 
 {% include href.md %}
