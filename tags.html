@@ -12,7 +12,7 @@ layout: default
 			</ul>
 			<h2 class="desc">Navigation:</h2>
 				  {% for tag in site.tags %} 
-			   		<h2 id="{{ tag[0] }}-ref" class="tag_nav">{{ tag[0] }}</h2>
+			   		<h3 id="{{ tag[0] }}-ref" class="tag_nav">{{ tag[0] }}</h2>
     				<ul class="tag_list">
 					{% for node in tag[1] %}
 					{% if node.title != null %}
