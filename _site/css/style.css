@@ -253,10 +253,11 @@ body                        { background: url(/images/body-bg3.jpg) repeat 0 0; 
 --------------------------------------------*/
 .tag_page 					{ padding: 10px 0; }
 .tag_page .title            { margin-bottom: 10px; font-family: UbuntuMono-B, consolas, monaco, monospace; padding: 0 0; font-size: 26px; font-weight: 400; line-height: 32px; color: #ffffff; text-align: left; text-shadow: 1px 1px #FFFFFF; text-transform: uppercase; }
-.tag_page .desc		        { margin-bottom: 10px; font-size:  20px; font-family: Georgia; color: #454545; border-bottom: 1px dashed #a8a8a8; }
+.tag_page .desc		        { margin-bottom: 10px; font-size:  20px; font-family: Georgia; color: #ee7600; border-bottom: 1px dashed #a8a8a8; }
 .tag_page .tag_nav 			{ color: #6495ed; font-family: UbuntuMono-B, consolas, monaco, monospace; font-weight: bold; font-size: 30px; line-height: 52px; margin-top: 26px; margin-bottom: 16px;} 
 .tag_page .tag_list			{ display: list-item; list-style-type: square; text-align: -webkit-match-parent; }
 .tag_page .tag_list a		{ color: #ddd; border-bottom: 1px dashed white; font-size: 1.5em; line-height: 1.625em; }
+.tag_page .tag_list li		{ list-style-type: square; }
 .tag_page .tag_box {
 	background: url('/images/skin.png') repeat 0 0 #999999;
 	padding: 0.8125em;
