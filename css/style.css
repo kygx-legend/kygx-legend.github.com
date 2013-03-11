@@ -78,7 +78,9 @@ body                        { background: url(/images/body-bg3.jpg) repeat 0 0; 
 .content-cnt                { width: 900px; margin:  30px auto; height:  auto; }
 .content-cnt .main          { width: 610px; height: auto; margin-right: 40px; float: left; }
 .content-cnt .main .comments{ font-size: 20px; color: #ddd; }
-.content-cnt .main-excerpt  { background: url(/images/body-bg4.jpg) repeat 0 0; border-radius: 10px; margin-bottom: 16px; padding: 10px 0; }
+.content-cnt .main-excerpt  { background: url(/images/body-bg4.jpg) repeat 0 0; border-radius: 10px; margin-bottom: 16px; padding: 10px 0; border: 3px solid #888; }
+.content-cnt .main-excerpt:hover
+							{ border:3px solid #eee; }
 .content-cnt .main-excerpt .date 
                             { font-style: italic; color: #fff; }
 .content-cnt .main-excerpt-title 
