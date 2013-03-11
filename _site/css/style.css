@@ -78,13 +78,13 @@ body                        { background: url(/images/body-bg3.jpg) repeat 0 0; 
 .content-cnt                { width: 900px; margin:  30px auto; height:  auto; }
 .content-cnt .main          { width: 610px; height: auto; margin-right: 40px; float: left; }
 .content-cnt .main .comments{ font-size: 20px; color: #ddd; }
-.content-cnt .main-excerpt  { background: url(/images/body-bg4.jpg) repeat 0 0; border-radius: 10px; margin-bottom: 20px; padding: 10px 0; border-bottom: 1px dashed #bebebe; }
+.content-cnt .main-excerpt  { background: url(/images/body-bg4.jpg) repeat 0 0; border-radius: 10px; margin-bottom: 16px; padding: 10px 0; }
 .content-cnt .main-excerpt .date 
                             { font-style: italic; color: #fff; }
 .content-cnt .main-excerpt-title 
-                            { font-size: 26px; font-family: UbuntuMono-B, consolas, monaco, monospace; text-transform: uppercase; text-shadow: 1px 1px #FFFFFF; }
+                            { margin: 16px; font-size: 26px; font-family: UbuntuMono-B, consolas, monaco, monospace; text-transform: uppercase; text-shadow: 1px 1px #FFFFFF; }
 .content-cnt .main-excerpt p 
-                            { font-size:  14px; margin-bottom: 10px; font-family: Georgia; color: #eee; }
+                            { margin: 16px; font-size:  14px; margin-bottom: 10px; font-family: Georgia; color: #eee; }
 .content-cnt .main-excerpt p a                    
 							{ border-bottom: 1px dotted #686868; color: #eee; }
 .content-cnt .main-excerpt p a:hover              
