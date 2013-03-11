@@ -77,7 +77,128 @@ _gaq.push(['_trackPageview']);
                	<p class="meta"><time class="date" pubdate="2013-03-06">06 Mar 2013</time> By <a href="/contact.html" class="author" title="author">LegendLee</a><g:plusone size="small"></g:plusone></p>
                	<p class="description">Solution</p>
 				<p class="tags"><a class="tags">LeetCode</a><p>
- 			 	<h2>3->Add Two Numbers</h2>
+ 			 	<h3>7->Regular Expression Matching</h3>
+
+<p>Implement regular expression matching with support for '.' and '<em>'.
+'.' Matches any single character.
+'</em>' Matches zero or more of the preceding element.</p>
+
+<p>The matching should cover the entire input string (not partial).</p>
+
+<p>The function prototype should be:
+bool isMatch(const char <em>s, const char </em>p)</p>
+
+<pre><code>Some examples:
+isMatch("aa","a") → false
+isMatch("aa","aa") → true
+isMatch("aaa","aa") → false
+isMatch("aa", "a*") → true
+isMatch("aa", ".*") → true
+isMatch("ab", ".*") → true
+isMatch("aab", "c*a*b") → true
+</code></pre>
+
+<p>Solution:</p>
+
+<pre><code>bool isMatch(const char *s, const char *p) {
+    if(*p==0)
+        return *s==0;
+    if(*(p+1)!='*'){
+        if(*p==*s||*p=='.'&amp;&amp;*s!=0)
+            return isMatch(s+1,p+1);
+        return false;
+    }
+    else{
+        while(*p==*s||*p=='.'&amp;&amp;*s!=0){
+            if(isMatch(s,p+2))
+                return true;
+            s++;
+        }
+        return isMatch(s,p+2);
+    }
+}
+</code></pre>
+
+<h3>6->Palindrome Number</h3>
+
+<p>Determine whether an integer is a palindrome. Do this without extra space.</p>
+
+<p>Solution:</p>
+
+<pre><code>bool isPalindrome(int x) {
+    if(x&gt;=0){
+        vector&lt;int&gt; num;
+        while(x!=0){
+            num.push_back(x%10);
+            x/=10;
+        }   
+        int n=num.size();
+        for(int i=0;i&lt;(n+1)/2;i++){
+            if(num[i]!=num[n-i-1])
+                return false;
+        }
+        return true;
+    }
+    else{
+        return false;
+    }
+}
+</code></pre>
+
+<h3>5->String To Integer</h3>
+
+<p>Implement atoi to convert a string to an integer.</p>
+
+<p>Hint: Carefully consider all possible input cases. If you want a challenge, please do not see below and ask yourself what are the possible input cases.</p>
+
+<p>Notes: It is intended for this problem to be specified vaguely (ie, no given input specs). You are responsible to gather all the input requirements up front.</p>
+
+<p>Solution:</p>
+
+<pre><code>int atoi(const char *str) {
+    if(str==NULL)
+        return 0;
+    bool flag=false;// 符号标记
+    int res=0;// 结果
+    while(*str==' '){
+        str++;
+    }
+    if(*str=='+'||*str=='-')
+        flag=(*str++!='+');
+    while(*str&gt;='0'&amp;&amp;*str&lt;='9'){
+        if(2147483647/10&gt;=res)
+            res*=10;
+        else
+            return !flag?2147483647:-2147483648;
+        if(2147483647-(*str-'0')&gt;=res)
+            res+=*str-'0';
+        else
+            return !flag?2147483647:-2147483648;
+        str++;
+    }
+    return flag?0-res:res; 
+}
+</code></pre>
+
+<h3>4->Reverse Integer</h3>
+
+<p>Reverse digits of an integer.</p>
+
+<p>Example1: x = 123, return 321
+Example2: x = -123, return -321</p>
+
+<p>Solution:</p>
+
+<pre><code>int reverse(int x) {
+    int result=0;
+    while(x!=0){
+        result=result*10+x%10;
+        x=x/10;
+    }
+}
+</code></pre>
+
+<h3>3->Add Two Numbers</h3>
 
 <p>You are given two linked lists representing two non-negative numbers. The digits are stored in reverse order and each of their nodes contain a single digit. Add the two numbers and return it as a linked list.</p>
 
@@ -124,7 +245,7 @@ Output: 7 -> 0 -> 8</p>
 }
 </code></pre>
 
-<h2>2->Longest Substring Without Repeating Characters</h2>
+<h3>2->Longest Substring Without Repeating Characters</h3>
 
 <p>Given a string, find the length of the longest substring without repeating characters. For example, the longest substring without repeating letters for "abcabcbb" is "abc", which the length is 3. For "bbbbb" the longest substring is "b", with the length of 1.</p>
 
@@ -181,7 +302,7 @@ int lengthOfLongestSubstring2(string s){
 }
 </code></pre>
 
-<h2>1->Two Sum</h2>
+<h3>1->Two Sum</h3>
 
 <p>Given an array of integers, find two numbers such that they add up to a specific target number.</p>
 
