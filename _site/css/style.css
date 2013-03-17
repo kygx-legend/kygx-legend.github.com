@@ -49,7 +49,7 @@ body .fn-hide               { display:none; }
 /*--------------------------------------------
                 default
 --------------------------------------------*/
-body                        { background: url(/images/body-bg3.jpg) repeat 0 0; }
+body                        { background: url(/images/body-bg5.png) repeat 0 0; }
 ::selection                 { background:#292929; color:#ffffff; text-shadow:none !important; }
 *::-moz-selection           { background: none repeat scroll 0 0 #292929; color: #FFFFFF; }
 
@@ -84,7 +84,7 @@ body                        { background: url(/images/body-bg3.jpg) repeat 0 0; 
 .content-cnt .main-excerpt .date 
                             { font-style: italic; color: #fff; }
 .content-cnt .main-excerpt-title 
-                            { margin: 16px; font-size: 26px; font-family: UbuntuMono-B; text-transform: uppercase; text-shadow: 1px 1px #FFFFFF; }
+                            { margin: 16px; font-size: 26px; text-transform: uppercase; text-shadow: 1px 1px #FFFFFF; }
 .content-cnt .main-excerpt p 
                             { margin: 16px; font-size:  14px; margin-bottom: 10px; font-family: Georgia; color: #eee; }
 .content-cnt .main-excerpt p a                    
