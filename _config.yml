@@ -11,7 +11,8 @@ author:
   name: LegendLee
   email: legendlee1314@gmail.com
 description: "LorpheuX -- Legend's Blog."
-about: "SS at SYSU. CAS. Coding. Math. Robotics. Network. Algorithm."
+about: "SS at SYSU. CAS 2010-2014. Coding. Math. Robotics. Network. Algorithm."
+about_blog: "Take notes. Store what learned. If you like some and want to reprint, please leave comment. Thanks!"
 tags_path: /tags.html
 feed: /atom.xml
 static:

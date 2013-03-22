@@ -4,7 +4,7 @@
  <title>LorpheuX</title>
  <link href="http://legendlee1314.github.com/atom.xml" rel="self"/>
  <link href="http://legendlee1314.github.com"/>
- <updated>2013-03-17T17:54:30+08:00</updated>
+ <updated>2013-03-22T10:33:16+08:00</updated>
  <id>http://legendlee1314.github.com</id>
  <author>
    <name>LegendLee</name>
@@ -12,6 +12,22 @@
  </author>
 
  <entrys>
+ 
+ <entry>
+   <title>Machine Learning Notes</title>
+   <url>/blog/2013/03/18/machine-learning-notes</url>
+   <link href="http://legendlee1314.github.com/blog/2013/03/18/machine-learning-notes"/>
+   <updated>2013-03-18T00:00:00+08:00</updated>
+   <id>http://legendlee1314.github.com/blog/2013/03/18/machine-learning-notes</id>
+ </entry>
+ 
+ <entry>
+   <title>Good Websites Collections</title>
+   <url>/blog/2013/03/17/good-websites-collections</url>
+   <link href="http://legendlee1314.github.com/blog/2013/03/17/good-websites-collections"/>
+   <updated>2013-03-17T00:00:00+08:00</updated>
+   <id>http://legendlee1314.github.com/blog/2013/03/17/good-websites-collections</id>
+ </entry>
  
  <entry>
    <title>ROS Middleware</title>
