@@ -13,3 +13,5 @@
 
 [markdown]: http://en.wikipedia.org/wiki/Markdown "MarkdownWiki"
 [markdownguide]: http://wowubuntu.com/markdown/ "MarkdownGuide"
+
+[zenofpython]: http://artifex.org/~hblanks/talks/2011/pep20_by_example.html "Zen of Python"
