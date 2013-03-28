@@ -64,41 +64,48 @@ _gaq.push(['_trackPageview']);
 	<div class="content-cnt fn-clear">
 		<div class="main fn-clear">
 			
-            	<article class="main-excerpt fn-clear">
+            	<article class="main-excerpt fn-clear" data="/blog/2013/02/27/opengl-notes">
+                    <h3 class="main-excerpt-title"><a href="/blog/2013/02/27/opengl-notes" title="OpenGL notes" rel="bookmark" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/27/opengl-notes']);">OpenGL notes</a></h3>
+                    <p class="date"><time pubdate="2013-02-27 00:00:00 +0800">27 Feb 2013</time></p>
+                    <p>To learn and use OpenGL.</p>
+                   	<p class="more"><a href="/blog/2013/02/27/opengl-notes" title="Read More" rel="nofollow" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/27/opengl-notes']);"><span>&#10149;</span>Read More</a></p>
+                </article>
+            
+            	<article class="main-excerpt fn-clear" data="/blog/2013/02/23/physics-for-game-developers">
                     <h3 class="main-excerpt-title"><a href="/blog/2013/02/23/physics-for-game-developers" title="Physics for game developers" rel="bookmark" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/23/physics-for-game-developers']);">Physics for game developers</a></h3>
                     <p class="date"><time pubdate="2013-02-23 00:00:00 +0800">23 Feb 2013</time></p>
                     <p><<游戏开发物理学>>笔记(updating)</p>
                    	<p class="more"><a href="/blog/2013/02/23/physics-for-game-developers" title="Read More" rel="nofollow" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/23/physics-for-game-developers']);"><span>&#10149;</span>Read More</a></p>
                 </article>
             
-            	<article class="main-excerpt fn-clear">
+            	<article class="main-excerpt fn-clear" data="/blog/2013/02/20/markdown-learning">
                     <h3 class="main-excerpt-title"><a href="/blog/2013/02/20/markdown-learning" title="Markdown Learning" rel="bookmark" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/20/markdown-learning']);">Markdown Learning</a></h3>
                     <p class="date"><time pubdate="2013-02-20 00:00:00 +0800">20 Feb 2013</time></p>
                     <p>Markdown is a lightweight markup language.</p>
                    	<p class="more"><a href="/blog/2013/02/20/markdown-learning" title="Read More" rel="nofollow" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/20/markdown-learning']);"><span>&#10149;</span>Read More</a></p>
                 </article>
             
-            	<article class="main-excerpt fn-clear">
+            	<article class="main-excerpt fn-clear" data="/blog/2013/02/20/git-learning">
                     <h3 class="main-excerpt-title"><a href="/blog/2013/02/20/git-learning" title="Git Learning" rel="bookmark" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/20/git-learning']);">Git Learning</a></h3>
                     <p class="date"><time pubdate="2013-02-20 00:00:00 +0800">20 Feb 2013</time></p>
                     <p>A Simple Guide</p>
                    	<p class="more"><a href="/blog/2013/02/20/git-learning" title="Read More" rel="nofollow" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/20/git-learning']);"><span>&#10149;</span>Read More</a></p>
                 </article>
             
-            	<article class="main-excerpt fn-clear">
+            	<article class="main-excerpt fn-clear" data="/blog/2013/02/19/summary-of-making-blog">
                     <h3 class="main-excerpt-title"><a href="/blog/2013/02/19/summary-of-making-blog" title="Summary of making Blog" rel="bookmark" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/19/summary-of-making-blog']);">Summary of making Blog</a></h3>
                     <p class="date"><time pubdate="2013-02-19 00:00:00 +0800">19 Feb 2013</time></p>
                     <p>Wordpress -> Django -> Jekyll</p>
                    	<p class="more"><a href="/blog/2013/02/19/summary-of-making-blog" title="Read More" rel="nofollow" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/19/summary-of-making-blog']);"><span>&#10149;</span>Read More</a></p>
                 </article>
             
-            	<article class="main-excerpt fn-clear">
-                    <h3 class="main-excerpt-title"><a href="/blog/2013/02/18/blog-by-jekyll--github" title="Blog by Github &amp; Jekyll &amp; Markdown" rel="bookmark" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/18/blog-by-jekyll--github']);">Blog by Github &amp; Jekyll &amp; Markdown</a></h3>
-                    <p class="date"><time pubdate="2013-02-18 00:00:00 +0800">18 Feb 2013</time></p>
-                    <p>搭建个人博客快捷教程</p>
-                   	<p class="more"><a href="/blog/2013/02/18/blog-by-jekyll--github" title="Read More" rel="nofollow" onclick="_hmt.push(['_trackPageview', '/blog/2013/02/18/blog-by-jekyll--github']);"><span>&#10149;</span>Read More</a></p>
-                </article>
-            
+            <script language="javascript">
+                $(document).ready(function(){
+                    $(".main-excerpt.fn-clear").click(function(){
+                        window.location.href = $(this)[0].getAttribute("data");
+                        });
+                });
+            </script>
             
 		        <nav id="pagination">
 		            <ul class="pagination">
@@ -109,6 +116,10 @@ _gaq.push(['_trackPageview']);
 		                
 		                    
 		                        <li class="current"><a href="javascript:void(0);">2</a></li>
+		                    
+		                
+		                    
+		                        <li><a href="/page3/">3</a></li>
 		                    
 		                
 		            </ul>
@@ -234,6 +245,10 @@ $(document).ready(function() {
 				<li><a href="/tags.html#Tutorials-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Tutorials-ref']);">Tutorials <span>1</span></a></li>
 			
 				<li><a href="/tags.html#Websites-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Websites-ref']);">Websites <span>1</span></a></li>
+			
+				<li><a href="/tags.html#Python-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Python-ref']);">Python <span>1</span></a></li>
+			
+				<li><a href="/tags.html#Notes-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Notes-ref']);">Notes <span>1</span></a></li>
 			
 		</ul>
 	</div>

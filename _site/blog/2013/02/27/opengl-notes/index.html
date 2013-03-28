@@ -104,6 +104,17 @@ Add -lglut which means link glut.</p>
 $ ./a.out
 </code></pre>
 
+<p>If this error occurs:</p>
+
+<pre><code>undefined reference to 'gluPerspective'
+collect2: ld returned 1 exit status
+</code></pre>
+
+<p>Then run:</p>
+
+<pre><code>$ gcc/g++ program.\{c/h\} -lglut -lGLU
+</code></pre>
+
 <p><strong>INSTALL &amp; Using on python</strong></p>
 
 <pre><code>$ sudo easy_install pyopengl
@@ -152,6 +163,7 @@ $(document).ready(function() {
     var disqus_developer = 1;
     var disqus_shortname = 'lorpheux'; // required: replace example with your forum shortname
 	$("#disqus_show").click(function() {
+        $("#disqus_show").hide();
     	/* * * DON'T EDIT BELOW THIS LINE * * */
         var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
         dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
@@ -280,6 +292,10 @@ $(document).ready(function() {
 				<li><a href="/tags.html#Tutorials-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Tutorials-ref']);">Tutorials <span>1</span></a></li>
 			
 				<li><a href="/tags.html#Websites-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Websites-ref']);">Websites <span>1</span></a></li>
+			
+				<li><a href="/tags.html#Python-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Python-ref']);">Python <span>1</span></a></li>
+			
+				<li><a href="/tags.html#Notes-ref" onclick="_hmt.push(['_trackPageview', '/tags.html#Notes-ref']);">Notes <span>1</span></a></li>
 			
 		</ul>
 	</div>

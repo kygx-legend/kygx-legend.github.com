@@ -22,7 +22,7 @@ __machine learning:__
 [研究者July](http://blog.csdn.net/v_JULY_v)
 
 __other:__  
-[python大牛](http://satyajit.ranjeev.in/)
+[python大牛](http://satyajit.ranjeev.in/)  
 [geeks for geeks](http://www.geeksforgeeks.org/)  
 [leetcode](http://leetcode.com/)
 

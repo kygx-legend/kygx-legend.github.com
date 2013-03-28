@@ -32,17 +32,18 @@ Copy and note at [Zen of Python][zenofpython].
     """
 
 ### Knowledges of Python(reprint [this](http://www.cnblogs.com/longdouhzt/archive/2012/05/19/2508844.html)):
-* filter(function, sequence)：对sequence中的item依次执行function(item)，将执行结果为True的item组成一个List/String/Tuple（取决于sequence的类型）返回：
-
+_filter(function, sequence)_：对sequence中的item依次执行function(item)，将执行结果为True的item组成一个List/String/Tuple（取决于sequence的类型）返回：
+{% highlight python %}
     >>> def f(x): return x % 2 != 0 and x % 3 != 0 
     >>> filter(f, range(2, 25)) 
     [5, 7, 11, 13, 17, 19, 23]
     >>> def f(x): return x != 'a' 
     >>> filter(f, "abcdef") 
     'bcdef'
+{% endhighlight %}
 
-* map(function, sequence) ：对sequence中的item依次执行function(item)，见执行结果组成一个List返回：
-
+_map(function, sequence)_：对sequence中的item依次执行function(item)，见执行结果组成一个List返回：
+{% highlight python %}
     >>> def cube(x): return x*x*x 
     >>> map(cube, range(1, 11)) 
     [1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]
@@ -50,25 +51,31 @@ Copy and note at [Zen of Python][zenofpython].
     ... 
     >>> map(cube , "abcde") 
     ['aa', 'bb', 'cc', 'dd', 'ee']
+{% endhighlight %}
+
 另外map也支持多个sequence，这就要求function也支持相应数量的参数输入：
+{% highlight python %}
     >>> def add(x, y): return x+y 
     >>> map(add, range(8), range(8)) 
     [0, 2, 4, 6, 8, 10, 12, 14]
+{% endhighlight %}
 
-* reduce(function, sequence, starting_value)：对sequence中的item顺序迭代调用function，如果有starting_value，还可以作为初始值调用，例如可以用来对List求和：
-
+_reduce(function, sequence, starting_value)_：对sequence中的item顺序迭代调用function，如果有starting_value，还可以作为初始值调用，例如可以用来对List求和：
+{% highlight python %}
     >>> def add(x,y): return x + y 
     >>> reduce(add, range(1, 11)) 
     55 （注：1+2+3+4+5+6+7+8+9+10）
     >>> reduce(add, range(1, 11), 20) 
     75 （注：20+1+2+3+4+5+6+7+8+9+10）
+{% endhighlight %}
 
-* lambda：这是Python支持一种有趣的语法，它允许你快速定义单行的最小函数，类似与C语言中的宏，这些叫做lambda的函数，是从LISP借用来的，可以用在任何需要函数的地方：
-
+_lambda_：这是Python支持一种有趣的语法，它允许你快速定义单行的最小函数，类似与C语言中的宏，这些叫做lambda的函数，是从LISP借用来的，可以用在任何需要函数的地方：
+{% highlight python %}
     >>> g = lambda x: x * 2 
     >>> g(3) 
     6 
     >>> (lambda x: x * 2)(3) 
     6
+{% endhighlight %}
 
 {% include href.md %}

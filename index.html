@@ -5,13 +5,20 @@ layout: default
 	<div class="content-cnt fn-clear">
 		<div class="main fn-clear">
 			{% for rpost in paginator.posts %}
-            	<article class="main-excerpt fn-clear">
+            	<article class="main-excerpt fn-clear" data="{{ rpost.url}}">
                     <h3 class="main-excerpt-title"><a href="{{ rpost.url }}" title="{{ rpost.title }}" rel="bookmark" onclick="_hmt.push(['_trackPageview', '{{ rpost.url }}']);">{{ rpost.title }}</a></h3>
                     <p class="date"><time pubdate="{{ rpost.date }}">{{ rpost.date | date_to_string }}</time></p>
                     <p>{{ rpost.description }}</p>
                    	<p class="more"><a href="{{ rpost.url }}" title="Read More" rel="nofollow" onclick="_hmt.push(['_trackPageview', '{{ rpost.url }}']);"><span>&#10149;</span>Read More</a></p>
                 </article>
             {% endfor %}
+            <script language="javascript">
+                $(document).ready(function(){
+                    $(".main-excerpt.fn-clear").click(function(){
+                        window.location.href = $(this)[0].getAttribute("data");
+                        });
+                });
+            </script>
             {% if paginator.total_pages > 1 %}
 		        <nav id="pagination">
 		            <ul class="pagination">
