@@ -4,7 +4,7 @@
  <title>LorpheuX</title>
  <link href="http://legendlee1314.github.com/atom.xml" rel="self"/>
  <link href="http://legendlee1314.github.com"/>
- <updated>2013-03-28T16:20:16+08:00</updated>
+ <updated>2013-04-05T23:46:22+08:00</updated>
  <id>http://legendlee1314.github.com</id>
  <author>
    <name>LegendLee</name>
@@ -12,6 +12,14 @@
  </author>
 
  <entrys>
+ 
+ <entry>
+   <title>about ubuntu</title>
+   <url>/blog/2013/03/28/about-ubuntu</url>
+   <link href="http://legendlee1314.github.com/blog/2013/03/28/about-ubuntu"/>
+   <updated>2013-03-28T00:00:00+08:00</updated>
+   <id>http://legendlee1314.github.com/blog/2013/03/28/about-ubuntu</id>
+ </entry>
  
  <entry>
    <title>Zen of Python Notes</title>

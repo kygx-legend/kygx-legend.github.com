@@ -3,7 +3,7 @@ permalink: /blog/:year/:month/:day/:title
 auto: true
 markdown: rdiscount
 pygments: true
-paginate: 5
+paginate: 8
 
 title: LorpheuX
 url: http://legendlee1314.github.com
