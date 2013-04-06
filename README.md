@@ -8,6 +8,8 @@ version: 1.0.0
 
 * static html
 * post easily
+* more safe
 * learn more about ruby, liquid, markdown...
+
 
 
