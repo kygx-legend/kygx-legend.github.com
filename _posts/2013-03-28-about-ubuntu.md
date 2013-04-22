@@ -18,6 +18,8 @@ added:
     recordmydesktop ======>out.ogv
     mencode =====>改视频格式
     (use:mencoder -ovc lavc -oac copy -lavcopts vcodec=flv -nosound -o out.flv out.ogv)
+    convert =====>更改图片各种格式
+    xpdf =====>解决pdf在linux下乱码问题
 
     dstat &amp; sar(iostat, vmstat, ifstat 三合一的工具，用来查看系统性能)
     slurm(查看网络流量的一个工具)
@@ -127,5 +129,10 @@ __3.shell强大命令([reprint](http://coolshell.cn/articles/8619.html))__
     想看看Marix的屏幕效果吗？（不是很像，但也很Cool!）
 
 《Linux命令行与Shell脚本编程大全》
+
+__4:记录__
+    if matplotlib not show:
+    $ find matplotlib/mpl-data
+    $ change backend to gtk|wx
 
 {% include href.md %}
