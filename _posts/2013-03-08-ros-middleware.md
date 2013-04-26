@@ -135,7 +135,7 @@ Perhaps you will debug when you are running these commands.
 
 Finally, I can run my_robot_name_2dnav but there is trouble at the part of _[map](http://www.ros.org/wiki/slam_gmapping/Tutorials/MappingFromLoggedData)_. The file you obtain is *.pgm. You can run `gimp *.pgm` to check. 
 
-If having some problems, you can talk with me by e-mail or leave comments.
+If having any problems, you can talk with me by e-mail or leave comments.
     
 
 
