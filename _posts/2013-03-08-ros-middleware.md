@@ -84,20 +84,28 @@ Until you can `rosrun eachpackage eachexcutable` successfully.
 Then you can follow _Navigation Stack Setup_.  
 
 You will see:  
-    $ roscreate-pkg my_robot_name_2dnav move_base my_tf_configuration_dep my_odom_configuration_dep my_sensor_configuration_dep
+    $ roscreate-pkg my_robot_name_2dnav move_base \ 
+        my_tf_configuration_dep my_odom_configuration_dep \
+        my_sensor_configuration_dep
 To change them:
-    $ roscreate-pkg my_robot_name_2dnav move_base robot_setup_tf robot_setup_sensor robot_setup_odometry roscpp
+    $ roscreate-pkg my_robot_name_2dnav move_base \
+        robot_setup_tf robot_setup_sensor \
+        robot_setup_odometry roscpp
 The same as the _my_robot_configuration.launch_.  
     <launch>
-    <node pkg="sensor_node_pkg" type="sensor_node_type" name="sensor_node_name" output="screen">
+    <node pkg="sensor_node_pkg" type="sensor_node_type" \ 
+        name="sensor_node_name" output="screen">
     <param name="sensor_param" value="param_value" />
     </node>
 
-    <node pkg="odom_node_pkg" type="odom_node_type" name="odom_node" output="screen">
+    <node pkg="odom_node_pkg" type="odom_node_type" \ 
+        name="odom_node" output="screen">
     <param name="odom_param" value="param_value" />
     </node>
 
-    <node pkg="transform_configuration_pkg" type="transform_configuration_type" name="transform_configuration_name" output="screen">
+    <node pkg="transform_configuration_pkg" \
+        type="transform_configuration_type" \
+        name="transform_configuration_name" output="screen">
     <param name="transform_configuration_param" value="param_value" />
     </node>
     </launch>
