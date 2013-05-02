@@ -135,6 +135,8 @@ Perhaps you will debug when you are running these commands.
 
 Finally, I can run my_robot_name_2dnav but there is an error at the part of _[map](http://www.ros.org/wiki/slam_gmapping/Tutorials/MappingFromLoggedData)_. The file you obtain is *.pgm. You can run `gimp *.pgm` to check. 
 
+_Updated:_  This implement is only the simple guide to do in the 3rd part of Navigation Tutorial as the beginning says. Discussing with other classmates, you can download supported platforms to set up your own robots. I only used the example of each part such as odometry and sensor. Obviously, it can lead to some unknown problems. Anyway, to launch the package also needs your patient debugging. All in all, this is my comprehension but not the appropriate method.
+
 If having any problems, you can talk with me by e-mail or leave comments.
     
 
