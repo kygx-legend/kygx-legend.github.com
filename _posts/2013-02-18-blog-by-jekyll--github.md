@@ -75,6 +75,6 @@ One simple language.
 
 ## Q&A
 
-If any question, please __[contact me][email]__.
+If any question, please __[contact with me][email]__.
 
 {% include href.md %}
