@@ -130,6 +130,18 @@ __3.shell强大命令([reprint](http://coolshell.cn/articles/8619.html))__
 
 《Linux命令行与Shell脚本编程大全》
 
+_快捷键_  
+    Ctrl + a 切换到命令行开始
+    Ctrl + e 切换到命令行末尾
+    Ctrl + l 清除屏幕内容
+    Ctrl + u 清除光标之前的内容
+    Ctrl + k 清除光标之后的内容
+    Ctrl + h 类似于退格键
+    Ctrl + r 在历史命令中查找 （这个非常好用，输入关键字就调出以前的命令了）
+    Ctrl + c 终止命令
+    Ctrl + d 退出shell
+    Ctrl + z 转入后台运行..
+
 __4:记录__
     if matplotlib not show:
     $ find matplotlib/mpl-data
