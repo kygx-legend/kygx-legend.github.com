@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "python pep8"
+title: "python style pep8"
 description: "Style Guide for Python Code."
 category: 
 tags: [Python, PEP8]
@@ -8,6 +8,7 @@ tags: [Python, PEP8]
 
 __[repost&1](http://www.python.org/dev/peps/pep-0008/)__  
 __[repost&2](http://www.blogjava.net/lincode/archive/2011/02/02/343859.html)__  
+__[repost&3.google开源项目风格规范.还不错](http://zh-google-styleguide.readthedocs.org/en/latest/google-python-styleguide/python_style_rules.html)__  
 
 Two good reasons to break a particular rule:  
 1. When applying the rule would make the code less readable, even for someone who is used to reading code that follows the rules.
