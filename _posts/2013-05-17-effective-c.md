@@ -74,7 +74,7 @@ _Remember_:
 
 * 在构造和析构期间不要调用virtual函数，因为这类调用从不下降至derived class（比起当前执行构造函数和析构函数的那层）。
 
-#### 条款10：令operator=返回一个reference to *this(Have assignment operators return a reference to *this.)
+#### 条款10：令operator=返回一个reference to \*this(Have assignment operators return a reference to \*this.)
 
 _Remember_:  
 
