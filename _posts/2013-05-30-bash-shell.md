@@ -24,7 +24,7 @@ CTRL 键
     Ctrl + xx - Move between EOL and current cursor position
     Ctrl + x @ - Show possible hostname completions
     Ctrl + z - Suspend/ Stop the command 
-    补充:
+补充:
     Ctrl + h - 删除当前字符
     Ctrl + w - 删除最后输入的单词
 
