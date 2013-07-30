@@ -58,6 +58,7 @@ tags: [Git, Github]
 	$ git log
 > use git GUI.
 	$ gitk
+> after forking, how to update from source code? _[Look this](http://dreamrunner.org/wiki/public_html/Software%20Engineering/git/Fork%20a%20Repo%20and%20fetch.html)_
 
 Hints:  
 
