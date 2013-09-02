@@ -287,4 +287,9 @@ __5:ubuntu各文件夹简介__
 18./proc/version 核心版本。  
 
 
+__4.about virtualbox__  
+
+extension pack: http://dlc.sun.com.edgesuite.net/virtualbox/$VERSION  $VERSION=4.1.12 
+
+
 {% include href.md %}
