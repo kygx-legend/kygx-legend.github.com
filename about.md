@@ -5,4 +5,11 @@ permalink: /about/
 ---
 
 Legend.
-CASer at SS of SYSU. (2010-2014)
+
+Enjoy Web Technology(HTML5, Chromium, Blink/WebKit, Crosswalk).
+
+Learning WebGL, investigating Web Performance.
+
+Software Engineer at Intel(Shanghai).
+
+CASer at SS of SYSU. (BD: 2010-2014)
