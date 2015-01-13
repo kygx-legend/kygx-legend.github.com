@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "Common GDB Instruction"
-description: "Manual for GDB."
-category: 
-tags: [Notes, GDB]
+summary: "Manual for GDB."
+category: gdb
 ---
 
 __[repost](http://blogread.cn/it/article/941?f=footerrecommend)__  

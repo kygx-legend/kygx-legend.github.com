@@ -1,15 +1,16 @@
 ---
 title: LorpheuX
 content: Legend's Blog
-date: 2013-02-19
-version: 1.0.0
+date: 2015-01-13
+version: 2.0.0
 ---
 ## Use Jekyll and Github to make my blog
 
-* static html
-* post easily
-* more safe
-* learn more about ruby, liquid, markdown...
+## License
 
+* MIT License(SEE LICENSE.txt)
 
+## Thanks
 
+* Thanks to [Jekyll](http://jekyllrb.com).
+* Thanks to [Pixyll](http://pixyll.com).

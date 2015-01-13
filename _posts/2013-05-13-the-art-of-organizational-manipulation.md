@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "the art of organizational manipulation"
-description: "notes at the media."
-category: 
-tags: [Notes, Engineer, Manage]
+summary: "notes at the media."
+category: booknotes
 ---
 
 To learn how manage or work with other geeks.

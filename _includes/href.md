@@ -1,4 +1,3 @@
-
 [email]: http://legendlee1314.github.com/contacts.html "Email"
 
 [google]: http://www.google.com/ "Google"

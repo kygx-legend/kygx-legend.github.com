@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "Git Learning"
-description: "A Simple Guide"
-category: 
-tags: [Git, Github]
+summary: "A Simple Guide"
+category: git
 ---
 
 * This is not the whole guide, just tell you how to use git by a new user.  If you want to know more, please go __[this page][google]__.

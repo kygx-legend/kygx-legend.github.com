@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "bash shell"
-description: "bash shell shortcuts."
-category: 
-tags: [Notes, Shell, Bash]
+summary: "bash shell shortcuts."
+category: shell bash
 ---
 
 __[repost](http://blogread.cn/it/article/1749?f=wb)__  

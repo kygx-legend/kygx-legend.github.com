@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "effective c++"
-description: "Notes of Book <The Effective C++>."
-category: 
-tags: [Notes, C++]
+summary: "Notes of Book <The Effective C++>."
+category: c++
 ---
 
 ## 一。让自己习惯C++(accustom yourself to C++)

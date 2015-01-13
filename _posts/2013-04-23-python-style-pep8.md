@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "python style pep8"
-description: "Style Guide for Python Code."
-category: 
-tags: [Python, PEP8]
+summary: "Style Guide for Python Code."
+category: python PEP8
 ---
 
 __[repost&1](http://www.python.org/dev/peps/pep-0008/)__  

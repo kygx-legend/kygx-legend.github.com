@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "Markdown Learning"
-description: "Markdown is a lightweight markup language."
-category: 
-tags: [Markdown]
+summary: "Markdown is a lightweight markup language."
+category: markdown
 ---
 
 Markdown is a lightweight markup language, originally created by John Gruber with substantial contributions from Aaron Swartz, allowing people "to write using an easy-to-read, easy-to-write plain text format, then convert it to structurally valid XHTML (or HTML)". The language takes many cues from existing conventions for marking up plain text in email. In other words, Markdown is a text-to-HTML conversion tool (for web writers). &copy; [Wiki][wiki].   

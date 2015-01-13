@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "Zen of Python Notes"
-description: "Keep Moving"
-category: 
-tags: [Python, Notes]
+summary: "Keep Moving"
+category: python
 ---
 Copy and note at [Zen of Python][zenofpython].
 

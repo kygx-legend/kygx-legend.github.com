@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "OpenGL notes"
-description: "To learn and use OpenGL."
-category: 
-tags: [OpenGL, Note]
+summary: "To learn and use OpenGL."
+category: OpenGL
 ---
 
 __INSTALL AT UBUNTU &amp; Using on C/C++__  

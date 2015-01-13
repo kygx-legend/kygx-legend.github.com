@@ -1,33 +1,44 @@
 # configures for Lorpheux by Legend Lee
-permalink: /blog/:year/:month/:day/:title
-auto: true
-markdown: rdiscount
-pygments: true
-paginate: 8
 
+# Settings
 title: LorpheuX
-url: http://legendlee1314.github.com
-author:
-  name: LegendLee
-  email: legendlee1314@gmail.com
+author: Legend
+email: legendlee1314@gmail.com
 description: "LorpheuX -- Legend's Blog."
-about: "SS at SYSU. CAS 2010-2014. Coding. Math. Robotics. Network. Algorithm."
-about_blog: "Take notes. Store what learned. If you like some and want to repost some without reposting declaration, please leave comment. Thanks!"
-tags_path: /tags.html
-feed: /atom.xml
-static:
-  css: /css/style.css
-  css_pygments: /css/pygments.css
-  jquery: /js/jquery.min.js
-blogName: LorpheuX
-blogDesc: Legend's Blog
-follow:
-  github: https://github.com/legendlee1314
-  twitter: https://twitter.com/legendlee1314
-  facebook: http://www.facebook.com/profile.php?id=100003741692205&ref=tn_tnmn
-disqus:
-  short_name: lorpheux
-production_url: http://legendlee1314.github.com
-analytics:
-  google: UA-38617326-1
-  baidu: 6ce79452dd7f61208b986b61b835536e
+url: "http://legendlee1314.github.io"
+baseurl: ""
+
+
+# Optionals
+animated: true
+show_related_posts: false
+show_post_footers: true
+show_social_icons: true
+
+# Build
+markdown: redcarpet
+redcarpet:
+  extensions: ['smart', 'tables', 'with_toc_data']
+permalink: pretty
+paginate: 4
+sass:
+  compressed: true
+
+# Self information
+blog_name: LorpheuX
+blog_description: Legend's Blog
+
+# Social Links
+github_username: legendlee1314
+twitter_username: legendlee1314
+disqus_shortname: lorpheux
+stackoverflow_id:
+google_plus_id:
+linkedin_username:
+bitcoin_url:
+paypal_url:
+flattr_button:
+
+# Analytics
+google_analytics: UA-38617326-1
+baidu_tongji: 6ce79452dd7f61208b986b61b835536e

@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "about ubuntu"
-description: "Remember some issues at Ubuntu"
-category: 
-tags: [Ubuntu]
+summary: "Remember some issues at Ubuntu"
+category: Ubuntu, tools
 ---
 
 __1.Turn off the independent graphic card__  

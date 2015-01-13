@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "ROS Middleware"
-description: "Notes of Learning and Using ROS, Added simple tutorials."
-category: 
-tags: [ROS, Note, Tutorials]
+summary: "Notes of Learning and Using ROS, Added simple tutorials."
+category: ROS
 ---
 _All is at Ubuntu 12.04._
 

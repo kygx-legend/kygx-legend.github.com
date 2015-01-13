@@ -1,9 +1,8 @@
 ---
 layout: post
 title: "leetcode submit record"
-description: "Solution"
-category: 
-tags: [LeetCode]
+summary: "Solution"
+category: LeetCode, algorithm
 ---
 
 ### 7->Regular Expression Matching
