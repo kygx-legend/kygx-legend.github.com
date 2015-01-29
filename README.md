@@ -8,7 +8,8 @@ version: 2.0.0
 
 ## License
 
-* MIT License(SEE LICENSE.txt)
+* This is released by MIT License(SEE LICENSE.txt)
+* Except JQuery Terminal Emulator plugin. It is released under GNU LGPL3 license.
 
 ## Thanks
 
