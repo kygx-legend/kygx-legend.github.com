@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<body>
+  <link rel="stylesheet" href="{{ "/css/jquery.terminal.css" | prepend: site.baseurl }}"></link>
+  <div class="site-wrap">
+    {% include header.html %}
+    <div class="post p2 p-responsive wrap" role="main">
+      <div class="measure">
+        <canvas id="magican" width="800" height="600"></canvas>
+        <div id="terminal" class="terminal"></div>
+        {{ content }}
+      </div>
+    </div>
+  </div>
+  {% include footer.html %}
+  <script type="text/javascript" src="{{ "/js/jquery.terminal.min.js" | prepend: site.baseurl }}"/></script>
+  <script type="text/javascript" src="{{ "/js/magican.js" | prepend: site.baseurl }}"/></script>
+</body>
+</html>
